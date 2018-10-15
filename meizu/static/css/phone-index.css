@@ -1,0 +1,44 @@
+.body-con .nav{
+  padding: 10px 0;
+}
+.body-con .nav>a{
+  padding-right: 10px;
+}
+.body-con>div>ul{
+  background: white;
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px 20px;
+}
+.body-con>div>ul>li{
+  width: 8%;
+}
+.body-con>div>ul>li:nth-child(2){
+  text-align: center;
+}
+.body-con>div>p{
+  padding: 30px 0;
+}
+.body-con>div>p>a{
+  padding-right: 20px; 
+}
+.body-con>div>p>input{
+  margin-left: 900px;
+}
+#phone-show{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#phone-show ul{
+  width: 33%;
+  text-align: center;
+  border: 1px solid black;
+}
+#phone-show ul li:first-child img{
+  width: 80%;
+}
+#phone-show ul li:nth-child(2) img{
+  width: 20%;
+  margin: 0px 10px;
+}

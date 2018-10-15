@@ -1,0 +1,79 @@
+section{
+	position: relative;
+	height: 800px;
+	background: linear-gradient(to right,#DAE9C9,#CBCEC7);
+}
+section .form{
+	width: 500px;
+	height: 450px;
+	position: absolute;
+	top: 150px;
+	right: 150px;
+	background: white;
+}
+section .form ul{
+	margin-top: 20px;
+	width: 400px;
+	list-style: none;
+	position: absolute;
+	left: 50px;
+	top: 10px;
+	box-sizing: border-box;
+}
+section .form #teacher-login,#user-login{
+	left: 50px;
+	top: 80px;
+}
+section .form ul li input{
+	width: 100%;
+	height: 50px;
+	outline: none;
+	border: 1px solid rgb(235,245,245);
+}
+section .form ul li input[type=password],input[type=button]{
+	margin-top: 20px;
+}
+section .form ul li p{
+	height: 20px;
+	margin: 4px 10px;
+	font-size: 16px;
+	color: red;
+}
+section .form ul.choose li>a{
+	display: inline-block;
+	width: 195px;
+	height: 25px;
+	color: black;
+	text-align: center;
+	margin: 20px 0;
+	border-bottom: 2px solid rgb(235,210,210);
+}
+section .form ul.choose li>a.in{
+	margin-right: 10px;
+	border-bottom: 2px solid #1A1A18;
+}
+section .form ul li input[type=button]{
+	background: linear-gradient(to right,#BBF90A,#AEE80A);
+	transition: all 0.5s;
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+section .form #teacher-login{
+	display:none;
+}
+section .form ul li input[type=button]:hover{
+	box-shadow: 0 0 20px #C2C5BA;
+}
+section .form ul li button{
+	width: 150px;
+	height: 40px;
+	margin-left: 250px;
+	background: linear-gradient(to right,#BBF90A,#AEE80A);
+	border: 0px;
+	border-radius: 15px;
+	outline: none;
+	transition: all 0.5s;
+}
+section .form ul li button:hover{
+	box-shadow: 0 0 20px #C2C5BA;
+}

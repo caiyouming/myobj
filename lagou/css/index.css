@@ -1,0 +1,20 @@
+
+body>div.search{
+  width:  938px;
+}
+body>div.search>div:first-child input{
+  width: 795px;
+  float: left;
+  height: 46px;
+}
+body>div.search>div:first-child button{
+  width: 130px;
+  float: left;
+  height: 46px;
+}
+body>div.search .hot-SH span,body>div.search .hot-SH a{
+  padding-right: 20px;
+}
+div.search .hot-SH a{
+  color: green;
+}
