@@ -27,7 +27,8 @@ module.exports = function prepareUrls (protocol, host, port, pathname = '/') {
     })
 
   const isUnspecifiedHost = host === '0.0.0.0' || host === '::'
-  let prettyHost, lanUrlForConfig, lanUrlForTerminal
+  let prettyHost, lanUrlForConfig
+  let lanUrlForTerminal = chalk.gray('unavailable')
   if (isUnspecifiedHost) {
     prettyHost = 'localhost'
     try {
@@ -53,6 +54,8 @@ module.exports = function prepareUrls (protocol, host, port, pathname = '/') {
     }
   } else {
     prettyHost = host
+    lanUrlForConfig = host
+    lanUrlForTerminal = prettyPrintUrl(lanUrlForConfig)
   }
   const localUrlForTerminal = prettyPrintUrl(prettyHost)
   const localUrlForBrowser = formatUrl(prettyHost)

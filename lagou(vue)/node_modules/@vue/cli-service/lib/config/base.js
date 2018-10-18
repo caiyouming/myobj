@@ -5,6 +5,26 @@ module.exports = (api, options) => {
     const getAssetPath = require('../util/getAssetPath')
     const inlineLimit = 4096
 
+    const genAssetSubPath = dir => {
+      return getAssetPath(
+        options,
+        `${dir}/[name]${options.filenameHashing ? '.[hash:8]' : ''}.[ext]`
+      )
+    }
+
+    const genUrlLoaderOptions = dir => {
+      return {
+        limit: inlineLimit,
+        // use explicit fallback to avoid regression in url-loader>=1.1.0
+        fallback: {
+          loader: 'file-loader',
+          options: {
+            name: genAssetSubPath(dir)
+          }
+        }
+      }
+    }
+
     webpackConfig
       .mode('development')
       .context(api.service.context)
@@ -17,7 +37,6 @@ module.exports = (api, options) => {
         .publicPath(options.baseUrl)
 
     webpackConfig.resolve
-      .set('symlinks', false)
       .extensions
         .merge(['.js', '.jsx', '.vue', '.json'])
         .end()
@@ -80,10 +99,7 @@ module.exports = (api, options) => {
         .test(/\.(png|jpe?g|gif|webp)(\?.*)?$/)
         .use('url-loader')
           .loader('url-loader')
-          .options({
-            limit: inlineLimit,
-            name: getAssetPath(options, `img/[name].[hash:8].[ext]`)
-          })
+          .options(genUrlLoaderOptions('img'))
 
     // do not base64-inline SVGs.
     // https://github.com/facebookincubator/create-react-app/pull/1180
@@ -93,7 +109,7 @@ module.exports = (api, options) => {
         .use('file-loader')
           .loader('file-loader')
           .options({
-            name: getAssetPath(options, `img/[name].[hash:8].[ext]`)
+            name: genAssetSubPath('img')
           })
 
     webpackConfig.module
@@ -101,20 +117,14 @@ module.exports = (api, options) => {
         .test(/\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/)
         .use('url-loader')
           .loader('url-loader')
-          .options({
-            limit: inlineLimit,
-            name: getAssetPath(options, `media/[name].[hash:8].[ext]`)
-          })
+          .options(genUrlLoaderOptions('media'))
 
     webpackConfig.module
       .rule('fonts')
         .test(/\.(woff2?|eot|ttf|otf)(\?.*)?$/i)
         .use('url-loader')
           .loader('url-loader')
-          .options({
-            limit: inlineLimit,
-            name: getAssetPath(options, `fonts/[name].[hash:8].[ext]`)
-          })
+          .options(genUrlLoaderOptions('fonts'))
 
     // Other common pre-processors ---------------------------------------------
 

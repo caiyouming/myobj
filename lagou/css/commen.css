@@ -14,13 +14,13 @@ ul{
 }
 @media (max-width:1500px) {
   .container {
-    width: 1200px;
+    width: 1200px !important;
     margin: 0px auto;
   }
 }
 @media (min-width:1500px) {
   .container {
-    width: 1400px;
+    width: 1400px !important;
     margin: 0px auto;
   }
 }

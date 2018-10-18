@@ -1,11 +1,18 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+const LRU = require('lru-cache')
 
 let _hasYarn
-const _yarnProjects = new Map()
+const _yarnProjects = new LRU({
+  max: 10,
+  maxAge: 1000
+})
 let _hasGit
-const _gitProjects = new Map()
+const _gitProjects = new LRU({
+  max: 10,
+  maxAge: 1000
+})
 
 // env detection
 exports.hasYarn = () => {
@@ -66,7 +73,6 @@ exports.hasProjectGit = (cwd) => {
   } catch (e) {
     result = false
   }
-  console.log('hasProjectGit', cwd, result)
   _gitProjects.set(cwd, result)
   return result
 }
