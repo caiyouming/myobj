@@ -1,0 +1,198 @@
+/*适配*/
+@media (max-width:1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .nav-left{
+	width: 15% 
+	}
+	.nav-center{
+	width: 50% 
+	}
+	.nav-right{
+	width: 35% 
+	}
+}
+@media (min-width:1200px) {
+  .container {
+    max-width: 1200px;
+  }
+  .nav-left{
+	width: 20% 
+	}
+	.nav-center{
+	width: 50% 
+	}
+	.nav-right{
+	width: 30% 
+	}
+}
+
+/*header*/
+header>a{
+	display: block;
+	margin: 0 auto;
+	max-width: 1920px;
+	height: 120px;
+	position: relative;
+}
+header a img{
+	max-width: 1920px;
+	position: absolute;
+	left: 50%;
+	top: 0px;
+	margin-left: -960px;
+}
+
+/*nav*/
+nav{
+	background: white;
+}
+#nav{
+	
+	margin: 0 auto;
+}
+#nav .nav-left,.nav-center,.nav-right{
+	float: left;
+}
+#nav:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#nav .nav-left img{
+	width: 125px;
+	margin-top: 30px;
+}
+#nav .nav-center{
+	display: flex;
+	justify-content: space-between;
+	line-height: 80px;
+}
+#nav .nav-right{
+	display: flex;
+	justify-content: center;
+}
+#nav .nav-right div{
+	border: 1px solid #D2CECE;
+	width: 170px;
+	height: 30px;
+	border-radius: 30px;
+	margin-top: 25px;
+}
+#nav .nav-right div>input{
+	outline: none;
+	border: none;
+	width: 125px;
+	height: 20px;
+	margin-left: 10px;
+}
+#nav .nav-right div>a{
+	width: 17px;
+	height: 14px;
+	margin-top: 3px;
+}
+#nav .nav-right div>a img{
+	width: 100%;
+}
+#nav .nav-right>a{
+	width: 30px;
+	height: 30px;
+	margin: 25px 15px;
+}
+#nav .nav-right>a>img{
+	width: 100%;
+}
+
+/*aside*/
+#banner{
+	position: relative;
+}
+#banner>div.aside{
+	margin: 0px auto;
+}
+#banner>div ul{
+	width: 245px;
+	height: 480px;
+	background: rgba(148,148,148,0.5);
+	list-style: none;
+	padding: 10px 0;
+}
+#banner div ul li{
+	padding: 18px 30px;
+	transition: all 0.4s;
+}
+#banner div ul li a{
+	font-size: 16px;
+}
+#banner-sld{
+	position: absolute;
+	left: 50%;
+	top: 0px;
+	margin-left: -960px;
+	z-index: -5;
+	max-width: 1920px;
+	height: 518px;
+}
+#banner-sld img{
+	max-width: 1920px;
+}
+#banner div ul li:hover{
+	background: white;
+}
+
+/*section homeServer*/
+section .homeServer{
+	margin: 15px auto;
+	display: flex;
+	justify-content: space-between;
+}
+section .homeServer>li{
+	flex: 0 0 20%;
+}
+section .homeServer>li img{
+	padding: 0px 5px;
+	width: 100%;
+}
+section .homeServer>li:first-child{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	text-align: center;
+	background: white;
+	margin-right: 5px;
+}
+section .homeServer>li:first-child a{
+	padding-top:20px;
+	flex: 0 0 50%;
+}
+section .homeServer>li:first-child a i{
+	width: 25px;
+}
+
+h1{
+	margin: 40px 0 20px;
+}
+h1>a{
+	font-size: 0.9rem;
+	margin-left:50px;
+	padding: 2px 0px;
+	border-bottom: 3px solid #666666;
+}
+
+/*热销推荐*/
+
+
+/*手机*/
+
+
+/*数码配件*/
+
+
+
+
+
+
+
+
