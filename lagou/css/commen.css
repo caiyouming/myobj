@@ -24,3 +24,8 @@ ul{
     margin: 0px auto;
   }
 }
+.clearfloat::after{
+  display: block;
+  content: "";
+  clear: both;
+}
