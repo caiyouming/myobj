@@ -17,6 +17,9 @@ a{
   }
 }
 /* 头部 */
+body{
+  overflow-x: hidden;
+}
 #header{
   font-size: 12px;
   text-align: center;
@@ -51,12 +54,61 @@ a{
 }
 
 /* 导航栏 */
+
+
+/* 视频背景 */
+section div.m-video{
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  margin-left: -960px;
+  z-index: -1;
+}
+section div.m-video1{
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  margin-left: -107px;
+  width: 214px;
+  height: 115px;
+  z-index: 5;
+}
+section div.m-video1 div.border{
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  margin-left: -107px;
+  width: 214px;
+  height: 115px;
+  z-index: 10;
+  background-image: url(https://qn.res.netease.com/pc/gw/20171101180612/img/spriter/index_z_64bf687.png);
+  background-position: -427px -964px;
+}
+section div.m-video1 video{
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -107px;
+  width: 214px;
+  height: 115px;
+  z-index: 5;
+}
+section div.m-btn{
+  position: absolute;
+  top: 550px;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 100px;
+  z-index: 5;
+  background: url(https://qn.res.netease.com/pc/fab/20170405104338/img/sl-yy_d0b1005.png) no-repeat;
+}
+
+/* 主体内容 */
 section{
   min-width: 1400px;
   margin-top: 20px;
   position: relative;
-  background: url(../index-img/bg2.jpg) no-repeat;
-  background-size: cover;
   height: 1272px;
 }
 section>nav>div{
@@ -390,6 +442,7 @@ section>div>ul>li:nth-child(2){
 #show-con>ul{
   padding: 0px 30px;
 }
+
 #search{
   width: 410px;
   border-top: 1px dashed  #D5D2D2;
@@ -991,8 +1044,17 @@ section>div>ul>li:nth-child(2){
   display: block;
   animation: hover-av 50s linear infinite;
 }
-#show .show-ul>li:nth-child(1){
+#show .show-ul .active1{
   background: url("../index-img/clips-ul-h.png") no-repeat 0 -14px;
+}
+#show .show-ul .active2{
+  background: url("../index-img/clips-ul-h.png") no-repeat 0 -178px;
+}
+#show .show-ul .active3{
+  background: url("../index-img/clips-ul-h.png") no-repeat 0 -178px;
+}
+#show .show-ul .active4{
+  background: url("../index-img/clips-ul-h.png") no-repeat 0 -260px;
 }
 #show .show-ul>li:nth-child(2):hover{
   background: url("../index-img/clips-ul-h.png") no-repeat 0 -96px;
@@ -1266,6 +1328,15 @@ div.finally div.b-box{
 }
 #data .g_item1 .title {
   position: relative;
+}
+#data .g_item1 .sld{
+  text-align: center;
+  width: 400px;
+}
+#data .g_item1 .sld .sld-box img{
+  margin-top: 20px;
+  width: 42%;
+  height: 240px;
 }
 #data .g_item1 .wave {
   position: absolute;

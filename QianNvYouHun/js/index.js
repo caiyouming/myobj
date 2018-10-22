@@ -77,44 +77,17 @@ $(function(){
   $('#show .show-con li').mouseover(function(e){
     var $tar=$(e.target);
     if($tar.hasClass('border')){
-      //console.log($tar.next())
-      /*(async function(){
-        await new Promise(function(){
-          setTimeout(function(){
-            $tar.children().eq(1).removeClass('active-l');
-          },200);
-          open();
-        })
-        await new Promise(function(){
-          setTimeout(function(){
-            $tar.children().eq(2).removeClass('active-b');
-          },200);
-          open();
-        })
-        await new Promise(function(){
-          setTimeout(function(){
-            $tar.children().eq(3).removeClass('active-r');
-          },200);
-          open();
-        })
-        await new Promise(function(){
-          setTimeout(function(){
-            $tar.next().css('display','block');
-          },200);
-          open();
-        })
-      })()*/
       $tar.children().eq(0).removeClass('active-t');
-      setTimeout(function(){
+      timer1=setTimeout(function(){
         $tar.children().eq(1).removeClass('active-l');
       },200);
-      setTimeout(function(){
+      timer2=setTimeout(function(){
         $tar.children().eq(2).removeClass('active-b');
       },400);
-      setTimeout(function(){
+      timer3=setTimeout(function(){
         $tar.children().eq(3).removeClass('active-r');
       },600);
-      setTimeout(function(){
+      timer4=setTimeout(function(){
         $tar.next().css('display','block');
       },800);
     }
@@ -123,6 +96,10 @@ $(function(){
     var $tar=$(e.target);
     if($tar.hasClass('border')){
       //console.log($tar.next())
+      clearTimeout(timer4)
+      clearTimeout(timer3)
+      clearTimeout(timer2)
+      clearTimeout(timer1)
       $tar.next().css('display','none');
       $tar.children().eq(3).addClass('active-r');
       setTimeout(function(){
@@ -138,6 +115,57 @@ $(function(){
   })
 
 
-})
+  $('#show .show-ul').click(function(e){
+    if($(e.target).index()=='0'){
+      console.log(1)
+      $(e.target).addClass('active1').siblings().removeClass();
+      $('#show .item-1').css('display','block').parent().siblings().children().css('display','none');
+      $('#item-one').css('display','flex').siblings().css('display','none')};
+    if($(e.target).index()=='1'){
+      $(e.target).addClass('active2').siblings().removeClass();
+      console.log(2)
+      $('#show .item-2').css('display','block').parent().siblings().children().css('display','none');
+      $('#item-one').css('display','flex').siblings().css('display','none')};
+    if($(e.target).index()=='2'){
+      $(e.target).addClass('active3').siblings().removeClass();
+      $('#show .item-3').css('display','block').parent().siblings().children().css('display','none');
+      $('#item-three').css('display','flex').siblings().css('display','none');}
+    if($(e.target).index()=='3'){
+      $(e.target).addClass('active4').siblings().removeClass();
+      $('#show .item-4').css('display','block').parent().siblings().children().css('display','none');
+      $('#item-four').css('display','flex').siblings().css('display','none');}
+  })
+  
 
+})
+function slds(){
+  var swiper = new Swiper({
+    el: '.swiper-container',
+    effect : 'cube',
+    cubeEffect: {
+      slideShadows: true,
+      shadow: true,
+      shadowOffset: 100,
+      shadowScale: 0,
+      autoplay: true,
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    mousewheel: {
+      enabled: true,
+    },
+    keyboard: {
+      enabled: true,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
+}
+slds();
 

@@ -16,10 +16,8 @@
           <li><a href="" class="logo"></a></li>
           <li>杭州站</li>
           <li><a href="" id="change-city">[切换城市]</a></li>
-          <li><a href="">首页</a></li>
-          <li><a href="">公司</a></li>
-          <li><a href="">校园</a></li>
-          <li><a href="">言职</a></li>
+          <li><router-link to="/index">首页</router-link></li>
+          <li><router-link to="/company">公司</router-link></li>
         </ul>
       </div>
     </header>   

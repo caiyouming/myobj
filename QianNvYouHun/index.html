@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/swiper.css">
   <script src="js/Jquary-3.3.1.main.js"></script>
 </head>
 <body>
@@ -32,6 +33,20 @@
   </header>
   
   <section>
+    <div class="m-video">
+        <video class="bgv" autoplay="" loop="" muted="">
+            <source src="https://qn.v.netease.com/2018/0905/7ee1d5f8ae7d5e390678fd5d0fe106c7.mp4" type="video/mp4">
+            <source src="https://qn.v.netease.com/2018/0905/a9974df055a1806a936742541f0a4d0c.webm" type="video/webm">
+        </video>
+    </div>
+    <div class="m-video1">
+        <video autoplay="" loop="" muted="">
+            <source src="https://qn.v.netease.com/2018/0921/f0cf2781d70f3ea95d42be7097fcb674.mp4" type="video/mp4">
+            <source src="https://qn.v.netease.com/2018/0921/831885886dd6e04241f1ceadb6a7e225.webm" type="video/webm">
+        </video>
+        <div class="border"></div>
+    </div>
+    <div class="m-btn"></div>
     <!--导航栏-->
     <nav>
       <div></div>
@@ -621,8 +636,8 @@
     <div id="show">
     <div class="show-clips">
       <ul class="show-ul">
-        <li data-toggle="flash">
-          <div style="display:block" class="flash">
+        <li data-toggle="flash" class="active1">
+          <div style="display:block" class="flash item-1">
             <img src="index-img/clips-ani.png" alt="">
             <img src="index-img/clips-ani.png" alt="">
             <img src="index-img/clips-ani.png" alt="">
@@ -632,7 +647,7 @@
           </div>
         </li>
         <li data-toggle="flash">
-          <div class="flash">
+          <div class="flash item-2">
             <img src="index-img/clips-ani.png" alt="">
             <img src="index-img/clips-ani.png" alt="">
             <img src="index-img/clips-ani.png" alt="">
@@ -642,7 +657,7 @@
           </div>
         </li>
         <li data-toggle="flash">
-          <div class="flash">
+          <div class="flash item-3">
             <img src="index-img/clips-ani.png" alt="">
             <img src="index-img/clips-ani.png" alt="">
             <img src="index-img/clips-ani.png" alt="">
@@ -652,7 +667,7 @@
           </div>
         </li>
         <li data-toggle="flash">
-          <div class="flash">
+          <div class="flash item-4">
             <img src="index-img/clips-ani.png" alt="">
             <img src="index-img/clips-ani.png" alt="">
             <img src="index-img/clips-ani.png" alt="">
@@ -663,7 +678,7 @@
         </li>
       </ul>
       <div class="show-con">
-        <ul style="display:flex">
+        <ul style="display:flex" id="item-one">
           <li>
             <div><img src="index-img/video02_2cc36ad.jpg" alt="" class="img"></div>
             <div class="border">
@@ -762,82 +777,301 @@
             </p>
           </li>
         </ul>
-        <ul>
+        <ul style="" id="item-two">
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video02_2cc36ad.jpg" alt="" class="img"></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            
+            </div>
+            <p><i class="icon-video"></i>新倩女幽魂 乐游记MV
+            </p>
           </li>
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video03_7ac4c3b.jpg" alt=""></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            </div>
+            <p><i class="icon-video"></i>新倩女幽魂魔道高手沦为饲养员
+            </p>
           </li>
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video01_836b502.jpg" alt=""></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            </div>
+            <p><i class="icon-video"></i>一醉青丘暑期资料片
+            </p>
           </li>
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video04_ffecce8.jpg" alt=""></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            </div>
+            <p><i class="icon-video"></i>探秘开发组：六周年微电影首集
+            </p>
           </li>
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video05_2dd036e.jpg" alt=""></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            </div>
+            <p><i class="icon-video"></i>奇然演绎公子景主题曲
+            </p>
           </li>
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video06_eba1efc.jpg" alt=""></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            </div>
+            <p><i class="icon-video"></i>新倩女主角剧情MV催泪上线
+            </p>
           </li>
         </ul>
-        <ul>
+        <ul style="" id="item-three">
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video02_2cc36ad.jpg" alt="" class="img"></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            
+            </div>
+            <p><i class="icon-video"></i>新倩女幽魂 乐游记MV
+            </p>
           </li>
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video03_7ac4c3b.jpg" alt=""></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            </div>
+            <p><i class="icon-video"></i>新倩女幽魂魔道高手沦为饲养员
+            </p>
           </li>
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video01_836b502.jpg" alt=""></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            </div>
+            <p><i class="icon-video"></i>一醉青丘暑期资料片
+            </p>
           </li>
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video04_ffecce8.jpg" alt=""></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            </div>
+            <p><i class="icon-video"></i>探秘开发组：六周年微电影首集
+            </p>
           </li>
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video05_2dd036e.jpg" alt=""></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            </div>
+            <p><i class="icon-video"></i>奇然演绎公子景主题曲
+            </p>
           </li>
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video06_eba1efc.jpg" alt=""></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            </div>
+            <p><i class="icon-video"></i>新倩女主角剧情MV催泪上线
+            </p>
           </li>
         </ul>
-        <ul>
+        <ul style="" id="item-four">
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video02_2cc36ad.jpg" alt="" class="img"></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            
+            </div>
+            <p><i class="icon-video"></i>新倩女幽魂 乐游记MV
+            </p>
           </li>
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video03_7ac4c3b.jpg" alt=""></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            </div>
+            <p><i class="icon-video"></i>新倩女幽魂魔道高手沦为饲养员
+            </p>
           </li>
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video01_836b502.jpg" alt=""></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            </div>
+            <p><i class="icon-video"></i>一醉青丘暑期资料片
+            </p>
           </li>
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video04_ffecce8.jpg" alt=""></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            </div>
+            <p><i class="icon-video"></i>探秘开发组：六周年微电影首集
+            </p>
           </li>
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video05_2dd036e.jpg" alt=""></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            </div>
+            <p><i class="icon-video"></i>奇然演绎公子景主题曲
+            </p>
           </li>
           <li>
-            <div><img src="" alt=""></div>
-            <p></p>
+            <div><img src="index-img/video06_eba1efc.jpg" alt=""></div>
+            <div class="border">
+              <div class="border-t active-t"></div>
+              <div class="border-l active-l "></div>
+              <div class="border-b active-b"></div>
+              <div class="border-r active-r"></div>
+            </div>
+            <div class="video">
+              <div>
+                <i></i>
+              </div>
+            </div>
+            <p><i class="icon-video"></i>新倩女主角剧情MV催泪上线
+            </p>
           </li>
         </ul>
       </div>
@@ -1033,13 +1267,34 @@
                               <img src="https://qn.res.netease.com/pc/gw/20171101180612/img/p4/wave1_6b13910.png" class="wave6" alt="">
                           </div>
                       </div>
-                      <div class="zrx" id="zrxContainer">
-                          <div class="bd"><ul style="display: none;"><li><div class="content"><div class="item"><a href="http://new.hi.163.com/#/mynews?userid=1571700" target="_blank"><img src="https://hi-163-common.nosdn.127.net/upload/201608/25/b5e884e06ab811e6abe337b57b8241d2?imageView&amp;thumbnail=360x465" alt="" class="avatar"></a></div><div class="item"><a href="http://new.hi.163.com/#/mynews?userid=1624199" target="_blank"><img src="https://hi-163-common.nosdn.127.net/upload/201609/04/0c7533d0727011e683775344c9d3648f?imageView&amp;thumbnail=360x465" alt="" class="avatar"></a></div></div></li></ul><ul style="display: block;"><li><div class="content"><div class="item"><a href="http://new.hi.163.com/#/mynews?userid=1605089" target="_blank"><img src="https://hi-163-common.nosdn.127.net/upload/201608/25/a03cb1206ad111e6b01cd7e1353a1f63?imageView&amp;thumbnail=360x465" alt="" class="avatar"></a></div><div class="item"><a href="http://new.hi.163.com/#/mynews?userid=1628170" target="_blank"><img src="https://hi-163-common.nosdn.127.net/upload/201609/08/899594f0759411e6b1eff16678a55c17?imageView&amp;thumbnail=360x465" alt="" class="avatar"></a></div></div></li></ul><ul style="display: none;"><li><div class="content"><div class="item"><a href="http://new.hi.163.com/#/mynews?userid=1624799" target="_blank"><img src="https://hi-163-common.nosdn.127.net/upload/201609/04/8bedf59072af11e6a231b13311f5241b?imageView&amp;thumbnail=360x465" alt="" class="avatar"></a></div><div class="item"><a href="http://new.hi.163.com/#/mynews?userid=1626522" target="_blank"><img src="https://hi-163-common.nosdn.127.net/upload/201609/06/0568631073b911e6aaae4f37ae7f16b1?imageView&amp;thumbnail=360x465" alt="" class="avatar"></a></div></div></li></ul><ul style="display: none;"><li><div class="content"><div class="item"><a href="http://new.hi.163.com/#/mynews?userid=1625743" target="_blank"><img src="https://hi-163-common.nosdn.127.net/upload/201609/05/523f55d0734c11e68210c9cdce1ef3ff?imageView&amp;thumbnail=360x465" alt="" class="avatar"></a></div><div class="item"><a href="http://new.hi.163.com/#/mynews?userid=1582099" target="_blank"><img src="https://hi-163-common.nosdn.127.net/upload/201608/26/c2acc9206b5311e6a7d735da45c6f9e7?imageView&amp;thumbnail=360x465" alt="" class="avatar"></a></div></div></li></ul></div>
-                          <div class="swiper-group">
-                              <div class="swiper-button-prev"></div>
-                              <div class="swiper-button-next"></div>
-                          </div>
-                      </div>
+                      <div class="swiper-container sld">
+                        
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-wrapper sld-box">
+                            <div class="swiper-slide ">
+                              <div>
+                                <img src="./index-img/show-1.jpg" alt="">
+                                <img src="./index-img/show-2.jpg" alt="">
+                              </div>
+                            </div>
+                            <div class="swiper-slide ">
+                              <div>
+                                <img src="./index-img/show-3.jpg" alt="">
+                                <img src="./index-img/show-4.jpg" alt="">
+                              </div>
+                            </div>
+
+                            <div class="swiper-slide ">
+                              <div>
+                                <img src="./index-img/show-5..jpg" alt="">
+                                <img src="./index-img/show-6.jpg" alt="">
+                              </div>
+                            </div>
+                            
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div> 
                   </div>
               </div>
           </div>
@@ -1129,6 +1384,7 @@
       </div> 
     </div>
   </div>
+  <script src="js/swiper.js"></script>
   <script src="js/commen.js"></script>
   <script src="js/index.js"></script>
 </body>

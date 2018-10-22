@@ -1,0 +1,32 @@
+nav{
+  background: #F0F4F3;
+}
+nav div.cp{
+  background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+}
+nav div.cp .cp-logo{
+  width: 20%;
+}
+nav div.cp .cp-con{
+  width: 80%;
+}
+nav div.cp ul{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav div.cp ul li{
+  width: 10%;
+}
+nav div.cp ul li.cp-title{
+  width: 100%;
+}
+nav ul.tabbar{
+  display: flex;
+  justify-content: left;
+}
+nav ul.tabbar li{
+  width: 15%
+}

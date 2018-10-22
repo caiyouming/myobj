@@ -1,4 +1,4 @@
-<template>
+<template :key="index">
   <div>
       <!-- 搜索框 -->
     <lg-header></lg-header>
@@ -566,7 +566,7 @@
           <button id="fresh-btn">查看更</button>
         </div>
       </div>
-    </main>
+    </main>f
 
     <!-- company con -->
     <div class="about-co container">
@@ -792,6 +792,9 @@ main>div.choose-job .active{
   transition: all 0.5
   s;
 }
+#hot-job ul li{
+  transition: all 0.4s;
+}
 #hot-job ul li:hover{
   box-shadow: 0 0 30px rgba(0,0,0,0.3);
 }
@@ -881,7 +884,7 @@ div.about-co>div.choose-co a{
 }
 div.about-co #hot-co{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 div.about-co #hot-co li{
