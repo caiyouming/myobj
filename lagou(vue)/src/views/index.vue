@@ -373,7 +373,25 @@
       <!-- 热门职位 -->
       <div id="hot-job">
         <ul>
-          <li>    
+          <li v-for="item1 in res.job">    
+            <div class="con">
+              <a href="" class="jname" v-text="item1.jname"></a><span class="jtime" v-text="item1.jtime"></span><i class="wicon"></i>
+              <span class="jsalary" v-text="item1.jsalary"></span> 
+            </div>
+            <p class="jneed" v-text="item1.jneed"></p>
+            <p>
+              <span class="intro" v-text="item1.jintro"></span>
+            </p>
+            
+            <div class="company">
+              <a class="clogo"><img :src="item1.jimg"></a>
+              <div>
+                <p class="cname" v-text="item1.jcompany"></p>
+                <p class="cintro" v-text="item1.jpro"></p>
+              </div>
+            </div>
+          </li>
+          <!--<li>    
             <div class="con">
               <a href="" class="jname">前端开发工程师</a><span class="jtime">[18:25发布]</span><i class="wicon"></i>
               <span class="jsalary">15k-20k</span> 
@@ -516,25 +534,7 @@
                 <p class="cintro">移动互联网/不需要融资/杭州</p>
               </div>
             </div>
-          </li>
-          <li>    
-            <div class="con">
-              <a href="" class="jname">前端开发工程师</a><span class="jtime">[18:25发布]</span><i class="wicon"></i>
-              <span class="jsalary">15k-20k</span> 
-            </div>
-            <p class="jneed">经验3-5年/本科</p>
-            <p>
-              <span class="intro">教育</span>
-            </p>
-            
-            <div class="company">
-              <a class="clogo"><img src="http://127.0.0.1:8080/img/1.png" alt=""></a>
-              <div>
-                <p class="cname">米络科技（KK直播）</p>
-                <p class="cintro">移动互联网/不需要融资/杭州</p>
-              </div>
-            </div>
-          </li>
+          </li>-->
         </ul>
         <div class="container">
           <button id="job-btn">查看更多</button>
@@ -657,17 +657,30 @@
   import LgFooter from '@/components/footer.vue'
   export default{
     data(){
-      return {}
+      return {
+        /*res:[
+          {cname:'',cimg:'',cintro:'',cpro:'',cs_total:'',cspeed:''},
+          {jname:'', jtime:'', jcompany:'', jsalery:'', jneed:'', jimg:'', jpro:''}
+        ]*/
+        res:[]
+      }
     },
     methods:{
-
+      
     },
     components:{
       LgHeader,
       LgFooter
     },
+    created(){
+      (function(self){
+        self.$http.get('http://localhost:3000/index/all').then(function(res){
+          console.log(res.data);
+          self.res = res.data;
+        })
+      })(this)
+    },
     mounted(){
-
     }
   }
 </script>

@@ -12,6 +12,6 @@ export default new Router({
     {path:'/',redirect:"/index"},
     {path:'/index',name:'index',component:index},
     {path:'/company',name:'company',component:company},
-    {path:'/index/detail',name:'detail',componengt:detail}
+    {path:'/detail',name:'detail',component:detail},
   ]
 })
