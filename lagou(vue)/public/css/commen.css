@@ -1,0 +1,29 @@
+body,ul,li,a,img,div,p,span,header,nav,aside,section,footer,input,h2,i,button{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	color: #333333;
+	display: inline-block;
+	font-size: 0.875rem;
+}
+ul{
+	list-style: none;
+}
+@media (max-width:1500px) {
+  .container {
+    width: 1200px;
+    margin: 0px auto;
+  }
+}
+@media (min-width:1500px) {
+  .container {
+    width: 1400px;
+    margin: 0px auto;
+  }
+}
+body{
+  overflow-x: hidden;
+}

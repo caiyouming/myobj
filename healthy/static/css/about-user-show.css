@@ -1,0 +1,32 @@
+#show-user{
+	margin: 100px auto;
+	width: 1200px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+#show-user>a{
+	display: block;
+	width: 400px;
+	box-sizing: border-box;
+	text-align: center;
+	border: 1px solid rgba(235,235,235,0.5);
+	transition: all 0.4s;
+}
+#show-user>a img{
+	margin: 20px;
+}
+#show-user>a>p:nth-child(2){
+	color: greenyellow;
+	font-size: 32px;
+	padding-bottom: 10px;
+}
+#show-user>a>p:nth-child(3){
+	color: black;
+}
+#show-user>a>p:last-child{
+	margin-bottom: 30px;
+}
+#show-user>a:hover{
+	box-shadow: 0 0 20px rgba(235,235,235);
+}

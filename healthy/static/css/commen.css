@@ -1,0 +1,125 @@
+body,div,header,section,a,ul,img,li,table,tr,td,form,p,footer{margin:0px;padding:0px;font-size: 14px;}
+h1,h2,h3{padding: 0px;margin: 0px;}
+a{
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+}
+/*header begin*/
+header #header{
+	width:100%;
+	border-bottom: 1px solid #E0DFDF;
+	box-shadow: 0 1px 20px 0 #E0DFDF;
+	background:white;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index: 10;
+}
+header #header:before{
+	content: "";
+	display: table;
+}
+header #header .header_nav{
+	width:1200px;
+	margin: 0px auto;
+	padding: 10px 0;
+}
+header #header .header_nav li{
+	margin: 3px 18px;
+	float: left;
+	list-style:none;
+	position:relative;
+	line-height: 50px;
+}
+header #header .header_nav li ul{
+	opacity: 0;
+	position:absolute;
+	left:-15px;
+	top:15px;
+	border:1px solid  #F2EFEF;
+}
+header #header .header_nav a{
+	text-decoration:none;
+	color:black;
+}
+header #header .header_nav .header_logo{
+	margin-right:250px;
+}
+header #header .header_nav li img{
+	width:56px;
+	height:60px;
+	vertical-align: middle;
+}
+header #header .header_nav li ul li{
+	margin:0px;
+	line-height:50px;
+	background:#FFFFFF;
+	width:120px;
+	height:50px;
+}
+
+header #header .header_nav li:hover ul{
+	opacity: 1;
+	transform: translateY(30px);
+	transition: all 0.5s;
+}
+header #header .header_nav li,li>a,li>a>ul{
+	transition: all 0.3s;
+}
+header #header .header_nav>li>a:hover{
+	color:limegreen;
+}
+header #header .header_nav li>ul>li:hover{
+	background: gainsboro;
+}
+/*header over*/
+
+/*section begin*/
+/*bg1*/
+#con-bg1{
+	background: url(../images/about-bg.jpg) no-repeat;
+	background-size: cover;
+	height: 447px;
+}
+#con-bg1 p{
+	margin: 0 auto;
+	width: 1200px;
+	text-align: center;
+	color: white;
+}
+#con-bg1:before{
+	content: "";
+	display:table;
+}
+#con-bg1 p:first-child{
+	margin: 200px auto 20px ;
+	font-size: 32px;
+}
+
+
+/*footer begin*/
+footer{
+	background: #192025;
+	color: #999999;
+}
+footer>div{
+	width: 1200px;
+	margin: 0px auto;
+
+}
+footer>div>p:nth-child(2){
+	height: 20px;
+	margin: 20px 0;
+}
+footer>div>p:first-child{
+	font-size: 24px;
+	padding-top: 50px;
+}
+footer>div>p>span{
+	margin-right: 120px;
+}
+footer>div>p:last-child{
+	padding: 20px 0;
+}
+/*footer over*/

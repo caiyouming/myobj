@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script src="./js/commen.js"></script>
+		<script src="./js/user_register.js"></script>
+		<style>
+			body,table,form,input{margin:0px;padding:0px;}
+			span{
+				margin-left: 10px;
+				color:red;
+				font-size:12px;
+			}
+			input{
+				width:250px;
+				height:30px;
+				border:1px solid black;
+				border-radius: 3px;
+				transition:0.5s
+			}
+			input:hover{
+				border:1px solid rgba(155,0,0,0.5);
+			}
+			.sub{
+				margin-left:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="/user/register" method="post" >
+			<table cellpadding="10px">
+				<tr>
+					<td><input type="text" id="uname" placeholder="请输入用户名" onblur="getUname()" name="uname"><span id="checkUname"></span></td>
+				</tr>
+				<tr>
+					<td><input type="password" id="upwd" placeholder="请输入密码" onblur="getUpwd()" name="upwd"><span id="checkUpwd"></span></td>
+				</tr>
+				<tr>
+					<td><input type="password" id="cupwd" placeholder="请再次输入密码" onblur="getCupwd()"><span id="checkCupwd"></span></td>
+				</tr>
+				<tr>
+					<td><input type="text" id="phone" placeholder="请输入手机号" onblur="getPhone()" name="phone"><span id="checkPhone"></span></td>
+				</tr>
+				<tr>
+					<td><input type="text" id="email" placeholder="请输入邮箱" onblur="getEmail()" name="email"><span id="checkEmail"></span></td>
+				</tr>
+			</table>
+			<input type="submit" value="提交注册" class="sub">
+		</form>
+	</body>

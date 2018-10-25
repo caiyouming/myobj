@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/commen.css"/>
+		<link rel="stylesheet" href="../css/login.css" />
+		<script src="../js/commen.js"></script>
+		<script src="../js/login.js"></script>
+	</head>
+	<body>
+		<header>
+			<div id="header">
+				<ul class="header_nav">
+					<li class="header_logo"><img src="../images/logo.png" alt="" /></li>
+					<li><a href="../index.html">首页</a></li>
+					<li><a href="about.html">关于我们</a></li>
+					<li><a href="about-pro.html">服务项目</a>
+						<ul>
+							<li><a href="#">个性化营养计划</a></li>
+							<li><a href="#">个性化锻炼计划</a></li>
+							<li><a href="#">个人例行安排</a></li>
+						</ul>
+					</li>
+					<li><a href="about-active.html">活动事件</a></li>
+					<li><a href="about-user-show.html">瘦身案例</a></li>
+					<li><a href="about-know.html">健身知识</a></li>
+					<li><a href="about-teacher.html">健身教练</a></li>
+					<li><a href="login.html">会员登录</a></li>
+				</ul>
+			</div>
+			<div id="con-bg1">
+				<p>欢迎 dear</p>
+				<p>welcome dear</p>
+			</div>
+		</header>
+		<section>
+			
+			<!--会员登录-->
+			<div class="form">
+					<ul class="choose">
+						<li><a href="#" data-choose="user" class="in">用户登录</a><a href="#" data-choose="teacher">教练登录</a></li>
+					</ul>
+					<ul id='user-login'>
+						<li><input type="text" name="unumber" id="unumber" value="" placeholder="请输入您的账号" onblur="checkUnumber()"/></li>
+						<li><p id="checkUnumber"></p></li>
+						<li><input type="password" name="upwd" id="upwd" value="" placeholder="请输入您的密码" onblur="checkUpwd()"/></li>
+						<li><p id="checkUpwd"></p></li>
+						<li><input type="button" value="登录" onclick="getUsub()"/></li>
+						<li><button onclick="">没有账号，点击注册</button></li>
+					</ul>
+					<ul id="teacher-login">
+						<li><input type="text" name="tnumber" id="tnumber" value="" placeholder="请输入您的账号" onblur="checkTnumber()" /></li>
+						<li><p id="checkTnumber"></p></li>
+						<li><input type="password" name="tpwd" id="tpwd" value="" placeholder="请输入您的密码" onblur="checkTpwd()" /></li>
+						<li><p id="checkTpwd"></p></li>
+						<li><input type="button" value="登录" onclick="getTsub()" /></li>
+						<li><button onclick="">没有账号，点击注册</button></li>
+					</ul>
+				<!--教练登录-->
+					
+			</div>
+		</section>
+		
+		<footer>
+			<iframe src="footer.html" width="100%" height="209" frameborder="0"></iframe>
+		</footer>
+	</body>
+</html>
