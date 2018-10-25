@@ -1,0 +1,9 @@
+$(function(){
+  $.ajax({
+    url:'http://127.0.0.1:3000/html/header.html',
+    type:'get',
+    success:function(res){
+      $(res).replaceAll('#header');
+    }
+  })
+})

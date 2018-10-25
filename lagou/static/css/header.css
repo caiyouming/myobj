@@ -1,0 +1,66 @@
+
+header>div:first-child{
+  background: #2E2E2E;
+  height: 30px;
+}
+header>div:last-child{
+  background: #f9f9f9;
+  height: 56px;
+}
+header ul{
+  display: flex;
+  justify-content: left;
+  padding: 0px 100px;
+}
+
+header div:first-child ul a{
+  color: #F9F9F9
+}
+header .no-login li{
+  height: 30px;
+  line-height: 30px;
+}
+header ul li span{
+  color: #545454;
+  padding: 0 10px;
+}
+header .no-login li i{
+  background: url("../img/app_icon.png");
+  display: inline-block;
+  width: 10px;
+  height: 15px;
+  vertical-align: middle;
+}
+header .no-login li:first-child a{
+  color: #24B69B;
+  padding: 0 10px;
+  display: block;
+}
+header .no-login .about-user{
+  margin-left:700px; 
+}
+header .tab{
+  line-height: 56px;
+}
+header .tab .logo{
+  background: url("../img/logo.png");
+  width: 97px;
+  height: 34px;
+  margin:11px 20px 11px 50px;
+  line-height: 56px;
+}
+header .tab a{
+  display: block;
+  margin: 0 20px;
+  font-size: 18px;
+  color: #909090;
+}
+header .tab #change-city{
+  margin: 3px 40px 0px 10px;
+  color: #909090;
+  font-size: 14px;
+}
+header .tab a:hover{
+  color: #2E2E2E;
+  text-decoration: underline;
+}

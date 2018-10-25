@@ -1,0 +1,81 @@
+footer .server{
+  margin-top:40px; 
+  display: flex;
+  justify-content: space-between;
+}
+footer .server li:first-child ul{
+  width: 182px;
+}
+footer .server li:first-child ul li{
+  margin-top: 10px;
+}
+footer .server li:first-child ul .download{
+  width: 182px;
+  height: 42px;
+  border: 1px solid green;
+  text-align: center;
+  line-height: 42px;
+  font-size: 14px;
+  color: #00AE82;
+}
+footer .server li:first-child ul .download i{
+  display: inline-block;
+  width: 12px;
+  height: 16px;
+  background: url("../img/app_icon.png");
+  vertical-align: middle;
+}
+footer .server li:first-child ul .download i img{
+  width: 100%;
+}
+footer .server li:first-child ul .wx-pro{
+  width: 182px;
+  height: 42px;
+  border: 1px solid green;
+  text-align: center;
+  line-height: 42px;
+  font-size: 14px;
+  color: #00AE82;
+}
+footer .server li:first-child ul .wx-pro i{
+  display: inline-block;
+  width: 12px;
+  height: 16px;
+  background: url("../img/app_icon.png");
+  vertical-align: middle;
+}
+footer .server li:first-child ul .wx-pro i img{
+  width: 100%;
+}
+footer .server li:first-child ul li:last-child a{
+  margin: 0 0 0 30px;
+  font-size: 14px;
+}
+footer .server li:first-child~li ul li:first-child{
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #4D4D4D;
+}
+footer .server li:first-child~li ul li:first-child~li a,footer .server li:first-child~li ul li:first-child~li{
+  font-size: 12px;
+  margin: 4px 0;
+}
+footer .copy-right{
+  margin-top: 100px;
+}
+footer .copy-right li{
+  float: left;
+  font-size: 14px;
+  padding: 0 10px;
+}
+footer .copy-right li a{
+  font-size: 12px;
+}
+footer .copy-right li:last-child{
+  border: 1px solid #D0D6DB;
+  padding: 10px;
+  font-size: 12px;
+  margin:-10px 0 0 30px;
+  text-align: center;
+}

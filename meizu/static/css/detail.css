@@ -1,0 +1,141 @@
+body>nav{
+  background: #F6F8FB;
+  margin: 0px auto;
+  width: 100%;
+}
+nav ul.nav-con{
+  height: 70px;
+  line-height: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+nav ul.nav-con .pname{
+  width: 50%;
+  font-size: 24px;
+}
+nav ul.nav-con .pname~li a{
+  font-size: 16px;
+  color: #333333;
+}
+nav ul.nav-con .pname~li span{
+  color: #DEDEDE;
+}
+body>main{
+  background: #FFFFFF;
+}
+body>main::before{
+  content: '';
+  display: table;
+}
+body>main div.box{
+  margin: 50px auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+body>main #img{
+  width: 50%;
+}
+body>main #phone-con{
+  width: 50%;
+}
+body>main #img .b-img{
+  width: 560px;
+}
+body>main #img .b-img img{
+  width: 100%;
+}
+body>main #img .s-img{
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0px 5%;
+}
+body>main #img .s-img a{
+  width: 18%;
+}
+body>main #img .s-img a img{
+  width: 100%;
+}
+body>main #phone-con ul li{
+  font-size: 16px;
+  padding: 10px;
+}
+body>main #phone-con ul li span{
+  font-size: 14px;
+  color: #8C8C8C;
+}
+body>main #phone-con ul li.ptitle{
+  font-size: 32px;
+  font-weight: 700;
+}
+body>main #phone-con ul li.prem{
+  padding-top: 0px;
+  color: red;
+  font-size: 14px;
+}
+body>main #phone-con ul li.price{
+  color: red;
+  font-size: 36px;
+  background: #F4F6FA;
+}
+body>main #phone-con ul li:nth-child(3)~li span:first-child{
+  display: inline-block;
+  width: 80px;
+}
+body>main #phone-con ul li.promise option{
+  display: inline;
+}
+body>main #phone-con ul li.promise span:nth-child(6){
+  padding-left: 80px;
+}
+body>main #phone-con ul li.promise a{
+  color: #88DBFF;
+}
+body>main #phone-con ul li.promise{
+  padding-bottom: 20px;
+}
+body>main #phone-con ul li.pmodel{
+  padding-top: 20px;
+  border-top: 1px dashed #BFBFBF;
+}
+body>main #phone-con ul li.promise~li span,body>main #phone-con ul li.promise~li div{
+  float: left;
+}
+body>main #phone-con ul li.promise~li::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+body>main #phone-con ul li div.box{
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: 0px;
+}
+body>main #phone-con ul li.promise~li a{
+  width: 32%;
+  border: 1px solid #BFBFBF;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: rgb(114, 112, 112);
+  margin: 0 5px 10px 0;
+}
+body>main #phone-con ul li div.box .active{
+  color: black;
+  border: 1px solid black;
+}
+body>main #phone-con ul li.getnum button,body>main #phone-con ul li.getnum input{
+  display: inline-block;
+  width: 45px;
+  height: 30px;
+  text-align: center;
+}
+body>main #phone-con #btn-pay{
+  margin-left: 80px;
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+}

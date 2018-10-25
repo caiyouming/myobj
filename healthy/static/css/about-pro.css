@@ -1,0 +1,100 @@
+body,div,header,section,a,ul,img,li,table,tr,td,form,p,footer{margin:0px;padding:0px;font-size: 14px;}
+h1,h2,h3{padding: 0px;margin: 0px;}
+a{
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+}
+
+/*con-bg1*/
+#con-bg1{
+	height: 447px;
+	background: url(../images/about-bg.jpg) no-repeat;
+	background-size: cover;
+}
+
+/*con-text*/
+#con-text{
+	margin: 70px 0;
+	text-align: center;
+}
+#con-text p:first-child{
+	font-size: 32px;
+	margin-bottom: 10px;
+}
+
+/*con-show-img*/
+#con-show-img{
+	width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#con-show-img a{
+	width: 380px;
+	height: 342px;
+	box-shadow:  0 0 10px rgba(0,0,0,0.1);
+	text-align: center;
+	color: black;
+	box-sizing: border-box;
+	transition: all 0.6s;
+}
+#con-show-img a img{
+	margin-top: 30px;
+	width: 338px;
+}
+#con-show-img a p{
+	padding: 10px 30px;
+}
+#con-show-img a p:nth-child(2){
+	margin-top: 10px;
+	font-size: 20px;
+}
+#con-show-img a>hr{
+	width: 80px;
+	opacity: 0.3;
+}
+#con-show-img a p:nth-child(4){
+	color: #DBDBDB;
+}
+#con-show-img a:hover{
+	box-shadow:  0 0 10px rgba(0,0,0,0.5);
+}
+
+/*con-bg2*/
+#con-bg2{
+	margin-top: 50px;
+	padding: 80px 0;
+	background: url(../images/about-pro-bg1.jpg) no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+}
+#con-bg2 img{
+	width: 400px;
+	margin-right: 50px;
+}
+#con-bg2 div{
+	width: 700px;
+}
+#con-bg2 div p:first-child{
+	color: #74C000;
+	font-size: 36px;
+	font-weight: bold;
+	margin: 20px 0;
+}
+#con-bg2 div button{
+	box-sizing: border-box;
+	outline: none;
+	width: 128px;
+	height: 49px;
+	border: 2px solid #74C000;
+	border-radius: 49px;
+	background: rgba(0,0,0,0);
+	margin-top: 50px;
+	transition: all 0.3s;
+}
+#con-bg2 div button:hover{
+	background: #74C000;
+}

@@ -1,0 +1,48 @@
+/*show-teacher*/
+#show-teacher{
+	box-sizing: border-box;
+	width: 1200px;
+	margin: 80px auto;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+#show-teacher div{
+	width: 360px;
+	height: 380px;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid rgba(0,0,0,0);
+}
+#show-teacher div>img{
+	width: 360px;
+	height: 380px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 3;
+	transition: all 0.4s;
+}
+#show-teacher div>div{
+	width: 360px;
+}
+#show-teacher div>div p{
+	width: 250px;
+	margin:0px auto;
+	text-align: center;
+	padding: 5px 0;
+	font-size: 16px;
+	color: darkseagreen;
+}
+
+#show-teacher div>div p:first-child{
+	font-size: 24px;
+	margin: 100px auto 0;
+}
+#show-teacher div:hover img{
+	transform: scale(1.2);
+	opacity: 0;
+}
+#show-teacher div:hover{
+	box-shadow: 0 0 20px 0 rgba(238,238,238);
+}

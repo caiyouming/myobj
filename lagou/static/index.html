@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/commen.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+
+  <!-- 搜索框 -->
+  <div class="search container">
+    <div>
+      <input type="text" id="SH" placeholder="实力派招收专场">
+      <button id="btn">搜索</button>
+    </div>
+    <div class="hot-SH">
+      <span>热门搜索:</span>
+      <a href="#">java后端开发</a>
+      <a href="#">铜板街</a>
+      <a href="#">曹操专车</a>
+      <a href="#">WECUT</a>
+      <a href="#">自如网</a>
+    </div>
+  </div>
+
+  <!-- 导航 -->
+  <nav class="nav container">
+    <div class="nav-l">
+      <ul>
+        <li>
+          <span>技术</span>
+          <a href="">Java</a>
+          <a href="">PHP</a>
+          <a href="">C++</a>
+          <a href="">区块链</a>
+          <ul>
+            <li>
+              <p>后端开发</p>
+              <a href="">Java</a>
+              <a href="">C++</a>
+              <a href="">PHP</a>
+              <a href="">数据挖掘</a>
+              <a href="">后端开发其它</a>
+            </li>
+            <li>
+              <p>移动开发</p>
+              <a href="">HTML5</a>
+              <a href="">Android</a>
+              <a href="">iOS</a>
+              <a href="">WP</a>
+              <a href="">移动开发其它</a>
+            </li>
+            <li>
+              <p>人工智能</p>
+              <a href="">深度学习</a>
+              <a href="">语音识别</a>
+              <a href="">机器视觉</a>
+              <a href="">算法工程师</a>
+              <a href="">自然语言处理</a>
+            </li>
+            <li>
+              <p>DBA</p>
+              <a href="">MongoDB</a>
+              <a href="">ETL</a>
+              <a href="">Hive</a>
+              <a href="">数据仓库</a>
+              <a href="">DBA其它</a>
+            </li>
+            <li>
+              <p>测试</p>
+              <a href="">性能测试</a>
+              <a href="">自动化测试</a>
+              <a href="">游戏测试</a>
+              <a href="">手机测试</a>
+              <a href="">测试其它</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span>产品</span>
+          <a href="">产品总监</a>
+          <a href="">产品经理</a>
+          <ul>
+              <li>
+                <p>后端开发</p>
+                <a href="">Java</a>
+                <a href="">C++</a>
+                <a href="">PHP</a>
+                <a href="">数据挖掘</a>
+                <a href="">后端开发其它</a>
+              </li>
+              <li>
+                <p>移动开发</p>
+                <a href="">HTML5</a>
+                <a href="">Android</a>
+                <a href="">iOS</a>
+                <a href="">WP</a>
+                <a href="">移动开发其它</a>
+              </li>
+              <li>
+                <p>人工智能</p>
+                <a href="">深度学习</a>
+                <a href="">语音识别</a>
+                <a href="">机器视觉</a>
+                <a href="">算法工程师</a>
+                <a href="">自然语言处理</a>
+              </li>
+              <li>
+                <p>DBA</p>
+                <a href="">MongoDB</a>
+                <a href="">ETL</a>
+                <a href="">Hive</a>
+                <a href="">数据仓库</a>
+                <a href="">DBA其它</a>
+              </li>
+              <li>
+                <p>测试</p>
+                <a href="">性能测试</a>
+                <a href="">自动化测试</a>
+                <a href="">游戏测试</a>
+                <a href="">手机测试</a>
+                <a href="">测试其它</a>
+              </li>
+            </ul>
+        </li>
+        <li>
+          <span>设计</span>
+          <a href="">UI设计师</a>
+          <a href="">交互设计</a>
+          <a href="">网页设计师</a>
+          <ul>
+              <li>
+                <p>后端开发</p>
+                <a href="">Java</a>
+                <a href="">C++</a>
+                <a href="">PHP</a>
+                <a href="">数据挖掘</a>
+                <a href="">后端开发其它</a>
+              </li>
+              <li>
+                <p>移动开发</p>
+                <a href="">HTML5</a>
+                <a href="">Android</a>
+                <a href="">iOS</a>
+                <a href="">WP</a>
+                <a href="">移动开发其它</a>
+              </li>
+              <li>
+                <p>人工智能</p>
+                <a href="">深度学习</a>
+                <a href="">语音识别</a>
+                <a href="">机器视觉</a>
+                <a href="">算法工程师</a>
+                <a href="">自然语言处理</a>
+              </li>
+              <li>
+                <p>DBA</p>
+                <a href="">MongoDB</a>
+                <a href="">ETL</a>
+                <a href="">Hive</a>
+                <a href="">数据仓库</a>
+                <a href="">DBA其它</a>
+              </li>
+              <li>
+                <p>测试</p>
+                <a href="">性能测试</a>
+                <a href="">自动化测试</a>
+                <a href="">游戏测试</a>
+                <a href="">手机测试</a>
+                <a href="">测试其它</a>
+              </li>
+            </ul>
+        </li>
+        <li>
+          <span>运营</span>
+          <a href="">新媒体运营</a>
+          <a href="">编辑</a>
+          <a href="">数据运营</a>
+          <ul>
+              <li>
+                <p>后端开发</p>
+                <a href="">Java</a>
+                <a href="">C++</a>
+                <a href="">PHP</a>
+                <a href="">数据挖掘</a>
+                <a href="">后端开发其它</a>
+              </li>
+              <li>
+                <p>移动开发</p>
+                <a href="">HTML5</a>
+                <a href="">Android</a>
+                <a href="">iOS</a>
+                <a href="">WP</a>
+                <a href="">移动开发其它</a>
+              </li>
+              <li>
+                <p>人工智能</p>
+                <a href="">深度学习</a>
+                <a href="">语音识别</a>
+                <a href="">机器视觉</a>
+                <a href="">算法工程师</a>
+                <a href="">自然语言处理</a>
+              </li>
+              <li>
+                <p>DBA</p>
+                <a href="">MongoDB</a>
+                <a href="">ETL</a>
+                <a href="">Hive</a>
+                <a href="">数据仓库</a>
+                <a href="">DBA其它</a>
+              </li>
+              <li>
+                <p>测试</p>
+                <a href="">性能测试</a>
+                <a href="">自动化测试</a>
+                <a href="">游戏测试</a>
+                <a href="">手机测试</a>
+                <a href="">测试其它</a>
+              </li>
+            </ul>
+        </li>
+        <li>
+          <span>市场与销售</span>
+          <a href="">市场推广</a>
+          <a href="">市场总监</a>
+          <ul>
+              <li>
+                <p>后端开发</p>
+                <a href="">Java</a>
+                <a href="">C++</a>
+                <a href="">PHP</a>
+                <a href="">数据挖掘</a>
+                <a href="">后端开发其它</a>
+              </li>
+              <li>
+                <p>移动开发</p>
+                <a href="">HTML5</a>
+                <a href="">Android</a>
+                <a href="">iOS</a>
+                <a href="">WP</a>
+                <a href="">移动开发其它</a>
+              </li>
+              <li>
+                <p>人工智能</p>
+                <a href="">深度学习</a>
+                <a href="">语音识别</a>
+                <a href="">机器视觉</a>
+                <a href="">算法工程师</a>
+                <a href="">自然语言处理</a>
+              </li>
+              <li>
+                <p>DBA</p>
+                <a href="">MongoDB</a>
+                <a href="">ETL</a>
+                <a href="">Hive</a>
+                <a href="">数据仓库</a>
+                <a href="">DBA其它</a>
+              </li>
+              <li>
+                <p>测试</p>
+                <a href="">性能测试</a>
+                <a href="">自动化测试</a>
+                <a href="">游戏测试</a>
+                <a href="">手机测试</a>
+                <a href="">测试其它</a>
+              </li>
+            </ul>
+        </li>
+        <li>
+          <span>职能</span>
+          <a href="">HR</a>
+          <a href="">行政</a>
+          <a href="">财务</a>
+          <a href="">审计</a>
+          <ul>
+              <li>
+                <p>后端开发</p>
+                <a href="">Java</a>
+                <a href="">C++</a>
+                <a href="">PHP</a>
+                <a href="">数据挖掘</a>
+                <a href="">后端开发其它</a>
+              </li>
+              <li>
+                <p>移动开发</p>
+                <a href="">HTML5</a>
+                <a href="">Android</a>
+                <a href="">iOS</a>
+                <a href="">WP</a>
+                <a href="">移动开发其它</a>
+              </li>
+              <li>
+                <p>人工智能</p>
+                <a href="">深度学习</a>
+                <a href="">语音识别</a>
+                <a href="">机器视觉</a>
+                <a href="">算法工程师</a>
+                <a href="">自然语言处理</a>
+              </li>
+              <li>
+                <p>DBA</p>
+                <a href="">MongoDB</a>
+                <a href="">ETL</a>
+                <a href="">Hive</a>
+                <a href="">数据仓库</a>
+                <a href="">DBA其它</a>
+              </li>
+              <li>
+                <p>测试</p>
+                <a href="">性能测试</a>
+                <a href="">自动化测试</a>
+                <a href="">游戏测试</a>
+                <a href="">手机测试</a>
+                <a href="">测试其它</a>
+              </li>
+            </ul>
+        </li>
+        <li>
+          <span>金融</span>
+          <a href="">投资</a>
+          <a href="">融资</a>
+          <a href="">并购</a>
+          <a href="">风控</a>
+          <ul>
+              <li>
+                <p>后端开发</p>
+                <a href="">Java</a>
+                <a href="">C++</a>
+                <a href="">PHP</a>
+                <a href="">数据挖掘</a>
+                <a href="">后端开发其它</a>
+              </li>
+              <li>
+                <p>移动开发</p>
+                <a href="">HTML5</a>
+                <a href="">Android</a>
+                <a href="">iOS</a>
+                <a href="">WP</a>
+                <a href="">移动开发其它</a>
+              </li>
+              <li>
+                <p>人工智能</p>
+                <a href="">深度学习</a>
+                <a href="">语音识别</a>
+                <a href="">机器视觉</a>
+                <a href="">算法工程师</a>
+                <a href="">自然语言处理</a>
+              </li>
+              <li>
+                <p>DBA</p>
+                <a href="">MongoDB</a>
+                <a href="">ETL</a>
+                <a href="">Hive</a>
+                <a href="">数据仓库</a>
+                <a href="">DBA其它</a>
+              </li>
+              <li>
+                <p>测试</p>
+                <a href="">性能测试</a>
+                <a href="">自动化测试</a>
+                <a href="">游戏测试</a>
+                <a href="">手机测试</a>
+                <a href="">测试其它</a>
+              </li>
+            </ul>
+        </li>
+      </ul>
+    </div>
+    <div><img src="./img/nav.PNG" alt=""></div>
+  </nav>
+
+  <!--job con -->
+  <main class="container main">
+    <!-- 职位选择 -->
+    <div class="choose-job">
+      <a href="javascript:;" class="hot-job active">热门职位</a>
+      <a href="javascript:;" class="fresh-job">最新职位</a>
+    </div>
+    <!-- 热门职位 -->
+    <div id="hot-job">
+      <ul>
+        <li>    
+          <div class="con">
+            <a href="" class="jname">前端开发工程师</a><span class="jtime">[18:25发布]</span><i class="wicon"></i>
+            <span class="jsalary">15k-20k</span> 
+          </div>
+          <p class="jneed">经验3-5年/本科</p>
+          <p>
+            <span class="intro">教育</span>
+          </p>
+          
+          <div class="company">
+            <a class="clogo"><img src="./img/1.png" alt=""></a>
+            <div>
+              <p class="cname">米络科技（KK直播）</p>
+              <p class="cintro">移动互联网/不需要融资/杭州</p>
+            </div>
+          </div>
+        </li>
+        <li>    
+          <div class="con">
+            <a href="" class="jname">前端开发工程师</a><span class="jtime">[18:25发布]</span><i class="wicon"></i>
+            <span class="jsalary">15k-20k</span> 
+          </div>
+          <p class="jneed">经验3-5年/本科</p>
+          <p>
+            <span class="intro">教育</span>
+          </p>
+          
+          <div class="company">
+            <a class="clogo"><img src="./img/1.png" alt=""></a>
+            <div>
+              <p class="cname">米络科技（KK直播）</p>
+              <p class="cintro">移动互联网/不需要融资/杭州</p>
+            </div>
+          </div>
+        </li>
+        <li>    
+          <div class="con">
+            <a href="" class="jname">前端开发工程师</a><span class="jtime">[18:25发布]</span><i class="wicon"></i>
+            <span class="jsalary">15k-20k</span> 
+          </div>
+          <p class="jneed">经验3-5年/本科</p>
+          <p>
+            <span class="intro">教育</span>
+          </p>
+          
+          <div class="company">
+            <a class="clogo"><img src="./img/1.png" alt=""></a>
+            <div>
+              <p class="cname">米络科技（KK直播）</p>
+              <p class="cintro">移动互联网/不需要融资/杭州</p>
+            </div>
+          </div>
+        </li>
+        <li>    
+          <div class="con">
+            <a href="" class="jname">前端开发工程师</a><span class="jtime">[18:25发布]</span><i class="wicon"></i>
+            <span class="jsalary">15k-20k</span> 
+          </div>
+          <p class="jneed">经验3-5年/本科</p>
+          <p>
+            <span class="intro">教育</span>
+          </p>
+          
+          <div class="company">
+            <a class="clogo"><img src="./img/1.png" alt=""></a>
+            <div>
+              <p class="cname">米络科技（KK直播）</p>
+              <p class="cintro">移动互联网/不需要融资/杭州</p>
+            </div>
+          </div>
+        </li>
+        <li>    
+          <div class="con">
+            <a href="" class="jname">前端开发工程师</a><span class="jtime">[18:25发布]</span><i class="wicon"></i>
+            <span class="jsalary">15k-20k</span> 
+          </div>
+          <p class="jneed">经验3-5年/本科</p>
+          <p>
+            <span class="intro">教育</span>
+          </p>
+          
+          <div class="company">
+            <a class="clogo"><img src="./img/1.png" alt=""></a>
+            <div>
+              <p class="cname">米络科技（KK直播）</p>
+              <p class="cintro">移动互联网/不需要融资/杭州</p>
+            </div>
+          </div>
+        </li>
+        <li>    
+          <div class="con">
+            <a href="" class="jname">前端开发工程师</a><span class="jtime">[18:25发布]</span><i class="wicon"></i>
+            <span class="jsalary">15k-20k</span> 
+          </div>
+          <p class="jneed">经验3-5年/本科</p>
+          <p>
+            <span class="intro">教育</span>
+          </p>
+          
+          <div class="company">
+            <a class="clogo"><img src="./img/1.png" alt=""></a>
+            <div>
+              <p class="cname">米络科技（KK直播）</p>
+              <p class="cintro">移动互联网/不需要融资/杭州</p>
+            </div>
+          </div>
+        </li>
+        <li>    
+          <div class="con">
+            <a href="" class="jname">前端开发工程师</a><span class="jtime">[18:25发布]</span><i class="wicon"></i>
+            <span class="jsalary">15k-20k</span> 
+          </div>
+          <p class="jneed">经验3-5年/本科</p>
+          <p>
+            <span class="intro">教育</span>
+          </p>
+          
+          <div class="company">
+            <a class="clogo"><img src="./img/1.png" alt=""></a>
+            <div>
+              <p class="cname">米络科技（KK直播）</p>
+              <p class="cintro">移动互联网/不需要融资/杭州</p>
+            </div>
+          </div>
+        </li>
+        <li>    
+          <div class="con">
+            <a href="" class="jname">前端开发工程师</a><span class="jtime">[18:25发布]</span><i class="wicon"></i>
+            <span class="jsalary">15k-20k</span> 
+          </div>
+          <p class="jneed">经验3-5年/本科</p>
+          <p>
+            <span class="intro">教育</span>
+          </p>
+          
+          <div class="company">
+            <a class="clogo"><img src="./img/1.png" alt=""></a>
+            <div>
+              <p class="cname">米络科技（KK直播）</p>
+              <p class="cintro">移动互联网/不需要融资/杭州</p>
+            </div>
+          </div>
+        </li>
+        <li>    
+          <div class="con">
+            <a href="" class="jname">前端开发工程师</a><span class="jtime">[18:25发布]</span><i class="wicon"></i>
+            <span class="jsalary">15k-20k</span> 
+          </div>
+          <p class="jneed">经验3-5年/本科</p>
+          <p>
+            <span class="intro">教育</span>
+          </p>
+          
+          <div class="company">
+            <a class="clogo"><img src="./img/1.png" alt=""></a>
+            <div>
+              <p class="cname">米络科技（KK直播）</p>
+              <p class="cintro">移动互联网/不需要融资/杭州</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="container">
+        <button id="job-btn">查看更多</button>
+      </div>
+    </div>
+    <!-- 最新职位 -->
+    <div id="fresh-job">
+      <ul>
+            <li>    
+              <div class="con">
+                <a href="" class="jname">前端开发工程师</a><span class="jtime">[18:25发布]</span><i class="wicon"></i>
+                <span class="jsalary">15k-20k</span> 
+              </div>
+              <p class="jneed">经验3-5年/本科</p>
+              <p>
+                <span class="intro">教育</span>
+              </p>
+              
+              <div class="company">
+                <a class="clogo"><img src="./img/1.png" alt=""></a>
+                <div>
+                  <p class="cname">米络科技（KK直播）</p>
+                  <p class="cintro">移动互联网/不需要融资/杭州</p>
+                </div>
+              </div>
+            </li>
+      </ul>
+      <div class="container">
+        <button id="fresh-btn">查看更</button>
+      </div>
+    </div>
+  </main>
+
+
+  <div class="about-co container">
+      <!-- 公司选择 -->
+    <div class="choose-co">
+      <a href="javascript:;" class="hot-co active">热门公司</a>
+    </div>
+    <!-- 热门公司 -->
+    <div>
+      <ul id="hot-co">
+        <li>  
+          <a href="" class="cimg"><img src="./img/2.jpg" alt=""></a>
+          <a href="" class="cname">杭州慧工科技有限公司</a>
+          <p class="cintro">移动互联网,电子商务 天使轮</p>
+          <p class="con">专注于万亿级别的工程机械后市场</p>
+          <div class="cnote">
+            <a href="" class="eval"><p>10</p><p>面试评价</p></a>
+            <a href="" class="cjob"><p>5</p><p>在招职位</p></a>
+            <a href="" class="speed"><p>55%</p><p>简历处理率</p></a>
+          </div>
+        </li>
+        <li>  
+          <a href="" class="cimg"><img src="./img/2.jpg" alt=""></a>
+          <a href="" class="cname">杭州慧工科技有限公司</a>
+          <p class="cintro">移动互联网,电子商务 天使轮</p>
+          <p class="con">专注于万亿级别的工程机械后市场</p>
+          <div class="cnote">
+            <a href="" class="eval"><p>10</p><p>面试评价</p></a>
+            <a href="" class="cjob"><p>5</p><p>在招职位</p></a>
+            <a href="" class="speed"><p>55%</p><p>简历处理率</p></a>
+          </div>
+        </li>
+        <li>  
+          <a href="" class="cimg"><img src="./img/2.jpg" alt=""></a>
+          <a href="" class="cname">杭州慧工科技有限公司</a>
+          <p class="cintro">移动互联网,电子商务 天使轮</p>
+          <p class="con">专注于万亿级别的工程机械后市场</p>
+          <div class="cnote">
+            <a href="" class="eval"><p>10</p><p>面试评价</p></a>
+            <a href="" class="cjob"><p>5</p><p>在招职位</p></a>
+            <a href="" class="speed"><p>55%</p><p>简历处理率</p></a>
+          </div>
+        </li>
+        <li>  
+          <a href="" class="cimg"><img src="./img/2.jpg" alt=""></a>
+          <a href="" class="cname">杭州慧工科技有限公司</a>
+          <p class="cintro">移动互联网,电子商务 天使轮</p>
+          <p class="con">专注于万亿级别的工程机械后市场</p>
+          <div class="cnote">
+            <a href="" class="eval"><p>10</p><p>面试评价</p></a>
+            <a href="" class="cjob"><p>5</p><p>在招职位</p></a>
+            <a href="" class="speed"><p>55%</p><p>简历处理率</p></a>
+          </div>
+        </li>
+        <li>  
+          <a href="" class="cimg"><img src="./img/2.jpg" alt=""></a>
+          <a href="" class="cname">杭州慧工科技有限公司</a>
+          <p class="cintro">移动互联网,电子商务 天使轮</p>
+          <p class="con">专注于万亿级别的工程机械后市场</p>
+          <div class="cnote">
+            <a href="" class="eval"><p>10</p><p>面试评价</p></a>
+            <a href="" class="cjob"><p>5</p><p>在招职位</p></a>
+            <a href="" class="speed"><p>55%</p><p>简历处理率</p></a>
+          </div>
+        </li>
+        <li>  
+          <a href="" class="cimg"><img src="./img/2.jpg" alt=""></a>
+          <a href="" class="cname">杭州慧工科技有限公司</a>
+          <p class="cintro">移动互联网,电子商务 天使轮</p>
+          <p class="con">专注于万亿级别的工程机械后市场</p>
+          <div class="cnote">
+            <a href="" class="eval"><p>10</p><p>面试评价</p></a>
+            <a href="" class="cjob"><p>5</p><p>在招职位</p></a>
+            <a href="" class="speed"><p>55%</p><p>简历处理率</p></a>
+          </div>
+        </li>
+      </ul>
+      <div class="container">
+        <button id="co-btn">查看更多</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

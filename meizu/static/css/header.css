@@ -1,0 +1,86 @@
+@media (max-width:1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .nav-left{
+	width: 15% 
+	}
+	.nav-center{
+	width: 50% 
+	}
+	.nav-right{
+	width: 35% 
+	}
+}
+@media (min-width:1200px) {
+  .container {
+    max-width: 1200px;
+  }
+  .nav-left{
+	width: 20% 
+	}
+	.nav-center{
+	width: 50% 
+	}
+	.nav-right{
+	width: 30% 
+	}
+}
+header{
+	background: white;	
+}
+#nav{
+	margin: 0 auto;
+}
+#nav .nav-left,.nav-center,.nav-right{
+	float: left;
+}
+#nav:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#nav .nav-left img{
+	width: 125px;
+	margin-top: 30px;
+}
+#nav .nav-center{
+	display: flex;
+	justify-content: space-between;
+	line-height: 80px;
+}
+#nav .nav-right{
+	display: flex;
+	justify-content: center;
+}
+#nav .nav-right div{
+	border: 1px solid #D2CECE;
+	width: 170px;
+	height: 30px;
+	border-radius: 30px;
+	margin-top: 25px;
+}
+#nav .nav-right div>input{
+	outline: none;
+	border: none;
+	width: 125px;
+	height: 20px;
+	margin-left: 10px;
+}
+#nav .nav-right div>a{
+	width: 17px;
+	height: 14px;
+	margin-top: 3px;
+}
+#nav .nav-right div>a img{
+	width: 100%;
+}
+#nav .nav-right>a{
+	width: 30px;
+	height: 30px;
+	margin: 25px 15px;
+}
+#nav .nav-right>a>img{
+	width: 100%;
+}

@@ -1,0 +1,52 @@
+body,div,header,section,a,ul,img,li,table,tr,td,form,p,footer{margin:0px;padding:0px;font-size: 14px;}
+h1,h2,h3{padding: 0px;margin: 0px;}
+a{
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+}
+/*con-show*/
+#con_show{
+	width:1200px;
+	margin: 50px auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#con_show>a{
+	display: block;
+	width: 380px;
+	height: 405px;
+	margin: 10px;
+	position: relative;
+	border-bottom: 1px solid #74c000;
+	color: black;
+
+}
+#con_show>a>div>img{
+	width: 380px;
+}
+#con_show p{
+	padding: 5px 0;
+}
+#con_show>a>div>p:first-child{
+	font-size: 18px;
+}
+#con_show>a .con_will_chenge{
+	height: 0px;
+	transition: all 0.6s;
+}
+#con_show>a .con_will_chenge>p{
+	transition: all 0.6s;
+}
+#con_show>a:hover .con_will_chenge{
+	position: absolute;
+	width: 380px;
+	height: 170px;
+	bottom: 0px;
+	left: 0px;
+	background: #74c000;
+}
+#con_show>a:hover .con_will_chenge>p{
+	padding-left: 20px;
+}
