@@ -1,0 +1,300 @@
+body p{
+  font-size: 14px;
+  padding: 5px;
+}
+nav{
+  width: 100%;
+  background: #F2F5F4;
+}
+.nav-box{
+  padding: 30px 0 20px;
+  display: flex;
+  justify-content: center;
+}
+.nav-box .intro-con{
+  width: 70%;
+}
+.nav-box .btn-user{
+  width: 30%;
+}
+.nav-box .intro-con .jname{
+  font-size: 32px;
+}
+.nav-box .intro-con .jneed{
+  font-size: 20px;
+}
+.nav-box .btn-user a{
+  display: inline-block;
+  width: 110px;
+  height: 50px;
+  border: 1px solid #00B38A;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+.nav-box .btn-user #btn-login2{
+  background: #00B38A;
+}
+/* section */
+.swiper-box{
+  padding: 50px;
+  width: 1000px;
+  margin: 50px auto;
+  background: rgb(169, 241, 225);
+  border-radius: 100px;
+}
+.swiper-box .swiper-slide{
+  padding: 20px 50px 50px 150px;
+  border-radius: 300px;
+  height: 300px;
+  background: rgb(74, 197, 154);
+  
+}
+.swiper-box .swiper-slide p.title{
+  font-size: 24px;
+}
+
+.place-job{
+  padding: 50px 0;
+}
+p.title{
+  font-size: 24px;
+}
+#btn-map{
+  margin-left: 800px;
+}
+
+#about-login,#about-map{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+  z-index:100;
+  display: none;
+}
+
+/* login */
+#about-login div.box{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 700px;
+  margin: -201px 0 0 -350px;
+  background: white;
+  z-index: 999;
+}
+#about-login div.box .close-btn{
+  display: block;
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background: #E8E8E8;
+  text-align: center;
+  line-height: 25px;
+}
+#about-login div.box .choose-type{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 52px;
+  height: 52px;
+  z-index: 99;
+}
+#about-login div.box .choose-type a{
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+#about-login div.box .choose-type a .qr-wx-img{
+  width: 52px;
+  height: 52px;
+  background: url("../img/QR-wx.svg");
+  transition: all 0.3s;
+}
+#about-login div.box .choose-type a .qr-u-img{
+  width: 52px;
+  height: 52px;
+  background: url("../img/qr-u.svg");
+  transition: all 0.3s;
+}
+#about-login div.box .choose-type a .qr-name{
+  position: absolute;
+  left: 58px;
+  top: 0px;
+  width: 106px;
+  height: 34px;
+  color: rgb(97, 97, 97);
+}
+#about-login div.box .choose-type a .qr-wx-img:hover{
+  background: url("../img/QR-wx-h.svg");
+}
+#about-login div.box .choose-type a .qr-u-img:hover{
+  background: url("../img/qr-u-h.svg");
+}
+#about-login div.box .login-con{
+  width: 700px;
+  padding: 62px 70px 68px 78px;
+  background-color: #fff;
+  display: table;
+  border-radius: 2px;
+  border: 1px solid #dce1e6;
+}
+#about-login div.box .login-con>div{
+  float: left;
+}
+#about-login div.box .login-con .con-l{
+  position: relative;
+  width: 290px;
+}
+#about-login div.box .login-con .choose-login a{
+  display: block;
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-size: 16px;
+  height: 30px;
+  border-bottom: 1px solid #E8E8E8;
+  margin-bottom: 20px;
+}
+#about-login div.box .login-con .choose-login a.login-type1{
+  color: #00b38a;
+  border-bottom:  1px solid #00b38a;
+}
+#about-login div.box .login-con .con-l .login{
+  position: relative;
+  height: 200px;
+}
+#about-login div.box .login-con .con-l .login>div{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: none;  
+}
+#about-login div.box .login-con .con-l .u-login input{
+  width: 290px;
+  outline: none;
+  height: 44px;
+  line-height: 44px;
+  margin: 5px   0 ;
+  border: 1px solid  #E8E8E8;
+  padding-left:10px; 
+  transition: all 0.5s;
+}
+#about-login div.box .login-con .con-l .u-login input:hover{
+  border: 1px solid #00AE82;
+  box-shadow: 0 0 5px rgb(11, 165, 126);
+}
+#about-login div.box .login-con .con-l .u-login p{
+  height: 25px;
+  font-size: 14px;
+  padding-left: 10px;
+  color: red;
+  opacity: 0;
+  transition: all 0.3s;
+}
+#about-login div.box .login-con .con-l .u-login #u-btn{
+  background: #00AE82;
+}
+#about-login div.box .login-con .con-l .p-login input{
+  width: 290px;
+  outline: none;
+  height: 44px;
+  line-height: 44px;
+  margin: 5px   0 ;
+  border: 1px solid  #E8E8E8;
+  padding-left:10px; 
+  transition: all 0.5s;
+}
+#about-login div.box .login-con .con-l .p-login #phone-id{
+  width: 200px;
+}
+#about-login div.box .login-con .con-l .p-login #getCode{
+  margin: 5px 0 ;
+  display: inline-block;
+  width: 90px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  color: #00AE82;
+}
+#about-login div.box .login-con .con-l .p-login p{
+  height: 25px;
+  font-size: 14px;
+  padding-left: 10px;
+  color: red;
+  opacity: 0;
+  transition: all 0.3s;
+}
+#about-login div.box .login-con .con-l .p-login #p-btn{
+  background: #00AE82;
+}
+#about-login div.box .login-con .con-l .p-login input:hover{
+  border: 1px solid #00AE82;
+  box-shadow: 0 0 5px rgb(11, 165, 126);
+}
+#about-login div.box .login-con .con-r{
+  margin:0 0 0  25px;
+  border-left: 1px dashed #E8E8E8;
+  padding: 25px 0 0 25px; 
+  height: 250px;
+}
+#about-login div.box .login-con .con-r p{
+  font-size: 14px;
+  padding: 10px 0;
+}
+#about-login div.box .login-con .con-r a{
+  color: #00AE82;
+  font-size: 16px;
+  padding: 0 10px 20px 5px
+}
+
+/* map */
+#about-map div.map-outbox{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -295px 0 0 -365px;
+  background: rgba(0,0,0,0.45);
+  z-index: 998;
+  width: 730px;
+  height: 590px;
+}
+#about-map div.map-box{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 700px;
+  margin: -280px 0 0 -350px;
+  background: white;
+  z-index: 999;
+}
+#about-map div.map-box .close-btn{
+  display: block;
+  width: 45px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+}
+#about-map div.map-box p{
+  padding-left: 20px;
+  width: 100%;
+  height: 40px;
+  font-size: 24px;
+  background: #00AE82;
+}
+#about-map div.map-box #allmap{
+  width: 100%;
+  height: 520px;
+}

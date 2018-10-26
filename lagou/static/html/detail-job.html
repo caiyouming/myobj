@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/commen.css">
+  <link rel="stylesheet" href="../css/swiper.css">
+  <link rel="stylesheet" href="../css/detail-job.css">
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=NATfql6e3ENEDpY0su4WCbU3ydRDkERw"></script>
+</head>
+<body>
+  <nav>
+    <div class="container nav-box">
+      <div class="intro-con">
+        <p class="cname">蛋壳公寓招聘</p>
+        <p class="jname">大数据架构师</p>
+        <p class="jneed">30k-45k /北京 / 经验5-10年 / 本科及以上 / 全职</p>
+        <p class="jpro">系统架构</p>
+        <p><span class="jtime">10:45</span>   发布于拉勾网</p>
+      </div>
+      <div class="btn-user">
+        <a href="" id="btn-login1">收藏</a>
+        <a href="" id="btn-login2">投个简历</a>
+      </div>
+    </div> 
+  </nav>
+  <section>
+    <div class="container">
+      <div class="swiper-container swiper-box">
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <p class="title">职位诱惑：</p>
+            <p>技术大牛</p>
+          </div>
+          <div class="swiper-slide">
+            <p class="title">职位描述：</p>
+            <p>1、完成公司大数据平台、数据仓库、数据集市的规划及实现；</p>
+            <p>2、参与大数据平台相关业务产品需求调研，需求分析，并独立完成核心模块代码实现；</p>
+            <p>3、参与现有大数据平台构架的改进，提质量及效率；</p>
+            <p>4、协助测试人员进行软件的功能及性能测试。</p>
+          </div>
+          <div class="swiper-slide">
+            <p class="title">任职资格：</p>
+            <p>1.本科以上学历，计算机相关专业；</p>
+            <p>2. 6年研发以上相关工作经验，3年以上互联网大数据平台研发经验；</p>
+            <p>3. 有项目管理经验，参与过过多个大型的数据仓库研发项目；</p>
+            <p>4. 精通数据建模、数据标准管理、元数据管理、数据质量管理</p>
+            <p> 5. 精通大数据Hadoop体系的相关技术，具有大数据平台的架构实战经验。具备Flume/Kafka/Sqoop/Hive/Storm/Spark/Hbase/Elastic Search等工具的实际开发经验；</p>
+            <p>6. 良好的沟通表达（口头及书面）和文档交付能力、良好的团队合作精神压力承受能力。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container place-job">
+    <p class="title">工作地址</p>
+    <p>
+      <span>北京 - 东城区 - 朝阳门 - 阳门内大街8号朝阳首府2层212</span>
+      <a href="#" id="btn-map">查看地图</a>
+    </p>
+  </div>
+  <div id="about-login">
+    <div class="box">
+      <!-- 登录类型 -->
+      <a href="" class="close-btn">X</a>
+      <div class="choose-type">
+        <a href="">
+          <div class="qr-wx-img"></div>
+          <div class="qr-name">微信快速登录</div>
+        </a>
+        <a href="" style="display:none">
+          <div class="qr-u-img"></div>
+          <div class="qr-name">账号密码登录</div>
+        </a>
+      </div>
+      <div class="login-con">
+        <!-- 登录方式 -->
+        <div class="con-l">
+          <div class="choose-login clearfloat">
+            <a href="" class="login-type1">密码登录</a>
+            <a href="" class="login-type2">验证码登录</a>
+          </div>
+          <div class="login">
+            <div class="u-login" style="display:block">
+              <form action="">
+                <input type="text" id="uname" 
+                placeholder="请输入您的手机号/邮箱">
+                <p id="c-uname" >请输入已验证手机/邮箱</p>
+                <input type="text" id="upwd" placeholder="请输入您的密码">
+                <p id="c-upwd" >请输入正确的密码</p>
+                <a href="" class="forget"></a>
+                <input type="submit" value="登录 " id="u-btn">
+              </form>
+            </div>
+            <div class="p-login" 
+            >
+              <form action="`">
+                <input type="text" placeholder="请输入常用手机号码">
+                <p></p>
+                <input type="text" placeholder="请输入验证码" id="phone-id"><a href="" id="getCode">获取验证码</a>
+                <p></p>
+                <input type="submit" value="登录" id="p-btn">
+              </form>
+            </div>
+          </div>
+          <div class="qr-login">
+            <img src="" alt="">
+          </div>
+        </div>
+        
+        <div class="con-r">
+          <p>还没有帐号:</p>
+          <a href="" class="register">立即注册</a>
+          <p>使用以下帐号直接登录:</p>
+          <p class="">
+            <a href=""><img src="../img/icon-baidu_d1ad2b6.png" alt=""></a>
+            <a href=""><img src="../img/icon-sina_e161002.png" alt=""></a>
+            <a href=""><img src="../img/icon-tencent_c85c20a.png" alt=""></a>
+            <a href=""><img src="../img/icon-wechat_823d4eb.png" alt=""></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="about-map"  style="display:block">
+    <div class="map-outbox"></div>
+    <div class="map-box">
+      <a href="#" class="close-btn">X</a>
+      <p>公司地址</p>
+      <div id="allmap"></div>
+    </div>
+  </div>
+  <script src="../js/swiper.js"></script>
+  <script src="../js/detail-job.js"></script>
+</body>
+</html>

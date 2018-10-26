@@ -26,6 +26,10 @@ router.get('/all',(req,res)=>{
 
 })
 
+router.get('detail',(req,res)=>{
+  var cid = req.query.cid,jid=req.query.jid;
+  var sql=""
+})
 
 
 

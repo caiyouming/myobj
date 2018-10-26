@@ -374,9 +374,9 @@
       <div id="hot-job" v-show="isActive">
         <ul>
           <li v-for="item1 in res.job" :key="item1.jid" :company-item="item1.cid">    
-            <router-link :to="{path:'/detail',query:{cid:item1.cid,jid:item1.jid}}" class="job-box" @click="jobBtn(key)">
+            <router-link :to="{path:'/detailJob',query:{cid:item1.cid,jid:item1.jid}}" class="job-box" @click="jobBtn(key)">
               <div class="con">
-                <a href="" class="jname" v-text="item1.jname"></a><span class="jtime" v-text="item1.jtime"></span><i class="wicon"></i>
+                <a href="" class="jname" v-text="item1.jname"></a><span class="jtime" >{{item1.jtime | dataFormat}}</span><i class="wicon"></i>
                 <span class="jsalary" v-text="item1.jsalary"></span> 
               </div>
               <p class="jneed" v-text="item1.jneed"></p>
@@ -435,8 +435,8 @@
       <!-- 热门公司 -->
       <div>
         <ul id="hot-co">
-          <li v-for="item2 in res.company">
-            <a href="">  
+          <li v-for="item2 in res.company" :key="item2.cid">
+            <router-link :to="{path:'/detail',query:{cid:item2.cid}}">  
               <a href="" class="cimg"><img :src="item2.cimg"></a>
               <a href="" class="cname" v-text="item2.cname"></a>
               <p class="cintro" v-text="item2.cpro"></p>
@@ -446,7 +446,7 @@
                 <a href="" class="cjob"><p>{{item2.cnum}}</p><p>在招职位</p></a>
                 <a href="" class="speed"><p>{{item2.cspeed}}%</p><p>简历处理率</p></a>
               </div>
-            </a>
+            </router-link>
           </li>
         </ul>
         <div class="container">
@@ -469,8 +469,8 @@
     },
     methods:{
         changeJob(){
-          console.log(this.isActive)
-          return !this.isActive; 
+          //console.log(this.isActive)
+          return this.isActive = !this.isActive; 
         }
     },
     components:{
@@ -480,7 +480,7 @@
     created(){
       (function(self){
         self.$http.get('http://localhost:3000/index/all').then(function(res){
-          console.log(res.data);
+          //console.log(res.data);
           self.res = res.data;
         })
       })(this)
@@ -590,9 +590,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
-  #fresh-job{
-    display: none;
   }
   main>div.choose-job a{
     font-size: 20px;

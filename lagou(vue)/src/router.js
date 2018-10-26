@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import index from './views/index.vue'
 import company from './views/company.vue'
 import detail from './views/detail.vue'
+import detailJob from './views/detail-job.vue'
 
 Vue.use(Router)
 
@@ -13,5 +14,6 @@ export default new Router({
     {path:'/index',name:'index',component:index},
     {path:'/company',name:'company',component:company},
     {path:'/detail',name:'detail',component:detail},
+    {path:'/detailJob',name:'detailJob',component:detailJob}
   ]
 })
