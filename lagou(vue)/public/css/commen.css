@@ -27,3 +27,8 @@ ul{
 body{
   overflow-x: hidden;
 }
+.clearfloat::after{
+  display: block;
+  content: "";
+  clear: both;
+}

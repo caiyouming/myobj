@@ -26,9 +26,29 @@ router.get('/all',(req,res)=>{
 
 })
 
-router.get('detail',(req,res)=>{
-  var cid = req.query.cid,jid=req.query.jid;
-  var sql=""
+router.get('/detail',(req,res)=>{
+  var cid = req.query.cid;
+  var obj = {company:[],jobnum:[]};
+  (async function(){
+    await new Promise(function(open){
+      var sql="SELECT * FROM `lg_company` WHERE cid=?"
+        pool.query(sql,[cid],(err,result)=>{
+          if(err) throw err;
+          obj.company = result;
+          open()
+        })
+    })
+    await new Promise(function(open){
+      var sql="SELECT * FROM `lg_job` WHERE cid=?"
+      pool.query(sql,[cid],(err,result)=>{
+        if(err)throw err;
+        obj.jobnum = result;
+        open()
+      })
+    })
+    res.send(obj)
+  })()
+  
 })
 
 

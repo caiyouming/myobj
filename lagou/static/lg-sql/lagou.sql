@@ -45,9 +45,10 @@ CREATE TABLE lg_user(
 CREATE TABLE lg_comment(
   id INT PRIMARY KEY AUTO_INCREMENT,
   cid      INT,
+  uid      INT,
+  cimg     VARCHAR(128),    #用户头像
   ctime    DATETIME,
-  content  VARCHAR(50),     #评价内容
-  username VARCHAR(25)      #评价的用户名
+  content  VARCHAR(50)      #评价内容
 );
 
 
@@ -103,12 +104,17 @@ INSERT INTO lg_job VALUES
 (null,7,'前端开发工程师',now(),'车轮','10000-15000','经验3-5年/本科','http://127.0.0.1:3000/img/chelun.png','移动互联网/C轮/150-500人'),
 (null,8,'前端开发工程师',now(),'小满科技','10000-15000','经验3-5年/本科','http://127.0.0.1:3000/img/xiaomankeji.jpg','移动互联网/C轮/150-500人');
 
+
+INSERT INTO lg_user VALUES
+(null,'dingding',123456,'cai@163.com','17631733840','','dingding',1),
+(null,'dangdang',123456,'cai@163.com','17631733840','','dangdang',1),
+(null,'xiaoming',123456,'cai@163.com','17631733840','','xiaoming',1);
+
 INSERT INTO lg_comment VALUES
-(null,1,now(),'这家公司条件不错，技术也很牛逼，就是面试人太多，竞争压力大','dingding'),
-(null,2,now(),'这家公司条件不错，技术也很牛逼，就是面试人太多，竞争压力大','dingding'),
-(null,3,now(),'这家公司条件不错，技术也很牛逼，就是面试人太多，竞争压力大','dingding'),
-(null,4,now(),'这家公司条件不错，技术也很牛逼，就是面试人太多，竞争压力大','dingding'),
-(null,5,now(),'这家公司条件不错，技术也很牛逼，就是面试人太多，竞争压力大','dingding'),
-(null,6,now(),'这家公司条件不错，技术也很牛逼，就是面试人太多，竞争压力大','dingding'),
-(null,7,now(),'这家公司条件不错，技术也很牛逼，就是面试人太多，竞争压力大','dingding'),
-(null,8,now(),'这家公司条件不错，技术也很牛逼，就是面试人太多，竞争压力大','dingding');
+(null,1,1,'','now()','面试官真的很有亲和力 平易近人 感觉是一家很好的公司'),
+(null,1,2,'','now()','面试官真的很有亲和力 平易近人 感觉是一家很好的公司'),
+(null,1,3,'','now()','面试官真的很有亲和力 平易近人 感觉是一家很好的公司');
+
+
+
+

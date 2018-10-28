@@ -2,10 +2,11 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import axios from 'axios'
-
+import vueForm from 'vue-form'
 
 Vue.config.productionTip = false; 
 
+Vue.use(vueForm)
 
 
 Vue.prototype.$http=axios; 

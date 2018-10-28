@@ -61,47 +61,47 @@
       <div class="box">
         <!-- 登录类型 -->
         <a href="javascript:" class="close-btn"  @click="showForm()">X</a>
-        <div class="choose-type">
-          <a href="">
+        <div class="choose-type" @click="changeLogin()">
+          <a href="javascript:" @click="wxLogin()" v-show="!loginType">
             <div class="qr-wx-img"></div>
             <div class="qr-name">微信快速登录</div>
           </a>
-          <a href="" style="display:none">
+          <a href="javascript:" @click="wxLogin()" v-show="loginType">
             <div class="qr-u-img"></div>
-            <div class="qr-name">账号密码登录</div>
+            <div class="qr-name" >账号密码登录</div>
           </a>
         </div>
         <div class="login-con">
           <!-- 登录方式 -->
           <div class="con-l">
             <div class="choose-login clearfloat">
-              <a href="" class="login-type1">密码登录</a>
-              <a href="" class="login-type2">验证码登录</a>
+              <a href="javascript:" class="login-type1" @click="pwdLogin()">密码登录</a>
+              <a href="javascript:" class="login-type2" @click="pwdLogin()">验证码登录</a>
             </div>
-            <div class="login">
-              <div class="u-login" style="display:block">
-                <form action="">
+            <div class="login" v-show="!iswxShow">
+              <div class="u-login" v-show="ispwdShow">
+                <form action="" @submit.prevent="getSubmit">
                   <input type="text" id="uname" 
-                  placeholder="请输入您的手机号/邮箱">
-                  <p id="c-uname" >请输入已验证手机/邮箱</p>
-                  <input type="text" id="upwd" placeholder="请输入您的密码">
-                  <p id="c-upwd" >请输入正确的密码</p>
+                  placeholder="请输入您的手机号/邮箱" @blur="checkUser(this)" v-model="uname">
+                  <p id="c-uname" v-text="cku"></p>
+                  <input type="password" id="upwd" placeholder="请输入您的密码" @blur="checkUpwd()" v-model="upwd">
+                  <p id="c-upwd" v-text="ckp"></p>
                   <a href="" class="forget"></a>
                   <input type="submit" value="登录 " id="u-btn">
                 </form>
               </div>
-              <div class="p-login">
-                <form action="`">
+              <div class="p-login" v-show="!ispwdShow">
+                <form action="">
                   <input type="text" placeholder="请输入常用手机号码">
                   <p></p>
                   <input type="text" placeholder="请输入验证码" id="phone-id"><a href="" id="getCode">获取验证码</a>
                   <p></p>
-                  <input type="submit" value="登录" id="p-btn">
+                  <input type="submit" value="登录" id="p-btn" @submit="getSubmit">
                 </form>
               </div>
             </div>
-            <div class="qr-login">
-              <img src="" alt="">
+            <div class="qr-login"  v-show="iswxShow">
+              <img src="http://127.0.0.1:8080/img/pc-login-image.png" alt="">
             </div>
           </div>
           
@@ -124,7 +124,7 @@
       <div class="map-box">
         <a href="javascript:" class="close-btn" @click="showMap()">X</a>
         <p>公司地址</p>
-        <div id="allmap"></div>
+        <baidu-map id="allmap" ak="NATfql6e3ENEDpY0su4WCbU3ydRDkERw"></baidu-map>
       </div>
     </div>
     <lg-footer></lg-footer>
@@ -135,11 +135,19 @@
   import LgFooter from '@/components/footer.vue'
   import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.min.css'
+  import BaiduMap from 'vue-baidu-map/components/map/Map.vue'
   export default{
     data(){
       return {
         isShow1:false,
-        isShow2:false
+        isShow2:false,
+        iswxShow:false,
+        loginType:false,
+        ispwdShow:true,
+        uname:'',
+        upwd:'',
+        cku:'',
+        ckp:''
       }
     },
     methods:{
@@ -171,42 +179,46 @@
           }
         })
       },
-      getMap(){
-        var map = new BMap.Map("allmap");
-        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
-        // 添加带有定位的导航控件
-        var navigationControl = new BMap.NavigationControl({
-          // 靠左上角位置
-          anchor: BMAP_ANCHOR_TOP_LEFT,
-          // LARGE类型
-          type: BMAP_NAVIGATION_CONTROL_LARGE,
-          // 启用显示定位
-          enableGeolocation: true
-        });
-        map.addControl(navigationControl);
-        // 添加定位控件
-        var geolocationControl = new BMap.GeolocationControl();
-        geolocationControl.addEventListener("locationSuccess", function(e){
-          // 定位成功事件
-          var address = '';
-          address += e.addressComponent.province;
-          address += e.addressComponent.city;
-          address += e.addressComponent.district;
-          address += e.addressComponent.street;
-          address += e.addressComponent.streetNumber;
-          alert("当前定位地址为：" + address);
-        });
-        geolocationControl.addEventListener("locationError",function(e){
-          // 定位失败事件
-          alert(e.message);
-        });
-        map.addControl(geolocationControl);
-        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+      checkUser(self){
+         //console.log(this.uname)
+        if(this.uname==''){
+          return this.cku='请输入您的用户名'
+        }else if(this.uname!==''){
+          return (function(self){
+            //console.log(11)
+            self.$http.get(`http://127.0.0.1:3000/user/checkuname?uname=${self.uname}`).then(function(res){
+              if(res.data.length==0){
+                return self.cku='您输入的用户名不存在'
+              }else{
+                return self.cku=''
+              }
+            })
+          })(this)
+        }
       },
-      loadBMapScript () {
-        let script = document.createElement('script');
-          script.src = 'http://api.map.baidu.com/api?v=2.0&ak=NATfql6e3ENEDpY0su4WCbU3ydRDkERw';
-          document.body.appendChild(script);
+      checkUpwd(){
+        if(this.upwd==''){
+          return this.ckp='密码不能为空'
+        }else if(this.upwd!==''){
+          return this.ckp=''
+        }
+      },
+      getSubmit(){
+        if(this.uname==''){
+          return this.cku='请输入您的用户名'
+        }else if(this.upwd==''){
+          return this.ckp='密码不能为空'
+        }else{
+          return (function(self){
+            self.$http.post('http://127.0.0.1:3000/user/check',`uname=${self.uname}&upwd=${self.upwd}`).then(function(res){
+              if(res.data.length==0){
+                return self.ckp='您输入的密码错误'
+              }else{
+                return location.href
+              }
+            })
+          })(this)
+        }
       },
       showForm(){
         console.log(this.isShow1)
@@ -214,21 +226,26 @@
       },
       showMap(){
         return this.isShow2=!this.isShow2;
+      },
+      wxLogin(){
+        return this.iswxShow=!this.iswxShow;
+      },
+      pwdLogin(){
+        return this.ispwdShow=!this.ispwdShow;
+      },
+      changeLogin(){
+        return this.loginType=!this.loginType;
       }
-      
     },
     components:{
       LgHeader,
-      LgFooter
+      LgFooter,
+      BaiduMap
     },
     created(){
-      this.loadBMapScript()
     },
     mounted(){
-      this.getSwiper(),
-      window['bMapInit'] = () => {
-        this.getMap();
-      }
+      this.getSwiper();
     }
   }
 </script>
@@ -422,8 +439,7 @@
   #about-login div.box .login-con .con-l .login>div{
     position: absolute;
     top: 0px;
-    left: 0px;
-    display: none;  
+    left: 0px; 
   }
   #about-login div.box .login-con .con-l .u-login input{
     width: 290px;
@@ -434,7 +450,7 @@
     border: 1px solid  #E8E8E8;
     padding-left:10px; 
     transition: all 0.5s;
-  }
+  }   
   #about-login div.box .login-con .con-l .u-login input:hover{
     border: 1px solid #00AE82;
     box-shadow: 0 0 5px rgb(11, 165, 126);
@@ -444,7 +460,7 @@
     font-size: 14px;
     padding-left: 10px;
     color: red;
-    opacity: 0;
+    display: block;
     transition: all 0.3s;
   }
   #about-login div.box .login-con .con-l .u-login #u-btn{
@@ -486,6 +502,15 @@
   #about-login div.box .login-con .con-l .p-login input:hover{
     border: 1px solid #00AE82;
     box-shadow: 0 0 5px rgb(11, 165, 126);
+  }
+  #about-login div.box .login-con .con-l .qr-login{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 290px;
+  }
+  #about-login div.box .login-con .con-l .qr-login img{
+    width: 90%;
   }
   #about-login div.box .login-con .con-r{
     margin:0 0 0  25px;
@@ -546,4 +571,5 @@
     width: 100%;
     height: 520px;
   }
+
 </style>
