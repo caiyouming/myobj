@@ -124,7 +124,7 @@
       <div class="map-box">
         <a href="javascript:" class="close-btn" @click="showMap()">X</a>
         <p>公司地址</p>
-        <baidu-map id="allmap" ak="NATfql6e3ENEDpY0su4WCbU3ydRDkERw"></baidu-map>
+        <baidu-map id="allmap" :center="center" :scroll-wheel-zoom="scrollWheelZoom" :zoom="zoom" @ready="handler" ></baidu-map>
       </div>
     </div>
     <lg-footer></lg-footer>
@@ -135,7 +135,7 @@
   import LgFooter from '@/components/footer.vue'
   import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.min.css'
-  import BaiduMap from 'vue-baidu-map/components/map/Map.vue'
+
   export default{
     data(){
       return {
@@ -147,10 +147,19 @@
         uname:'',
         upwd:'',
         cku:'',
-        ckp:''
+        ckp:'',
+        center: {lng: 0, lat: 0},
+        zoom: 3,
+        scrollWheelZoom:true,
       }
     },
     methods:{
+      handler ({BMap, map}) {
+        console.log(BMap, map)
+        this.center.lng = 116.404
+        this.center.lat = 39.915
+        this.zoom = 15
+      },
       getSwiper(){
         var swiper = new Swiper({
           el: '.swiper-container',
@@ -240,7 +249,6 @@
     components:{
       LgHeader,
       LgFooter,
-      BaiduMap
     },
     created(){
     },
