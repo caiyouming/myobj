@@ -1,0 +1,62 @@
+page{
+  height: 100%;
+  
+}
+/**mini/app.wxss  全局样式文件**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+/*第一个公共样式:右侧细线*/
+.bdr{
+  position: relative;
+}
+.bdr::after{
+  content:"";
+  width:1rpx;
+  height:100%;
+  position: absolute;
+  right:0;
+  top:0;
+  background-color: #ccc;
+}
+
+/*第二功能 通用灰色分隔块*/
+.divider{
+  height:20rpx;            /*高度*/
+  background:#f1f1f1;   /*灰色背景*/
+  box-shadow:0 5rpx 5rpx rgba(0,0,0,.1) inset;
+}
+/*第三功能 通用箭头*/
+/*箭头*/
+.arrow{
+  display: flex;
+  justify-content: space-between;/*两端对齐*/
+  align-items: center;
+}
+.arrow::after{
+  content:"";
+  width:15rpx;    /*箭头正方形加边框*/
+  height:15rpx;
+  border-top:3rpx solid #ccc;
+  border-right:3rpx solid #ccc;
+  transform: rotate(45deg)
+}
+
+
+/*列表*/
+.cell{
+  background-color:#fff;
+  font-size:14px;
+}
+.cell-item{
+  border-bottom:1rpx solid #ddd; 
+  padding:20rpx 30rpx;
+}
+
+

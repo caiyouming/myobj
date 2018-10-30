@@ -1,0 +1,13 @@
+.avatar{
+  height:400rpx;
+  background-color:#f60;
+  display: flex;     /*弹性布局*/
+  justify-content: center; /*子元素居中*/
+  align-items: center;
+}
+.avatar image{
+  width:200rpx; /*头像宽度和高度*/
+  height:200rpx;
+  border:10rpx solid rgba(0,0,0,.3);
+  border-radius: 50%;
+}

@@ -1,0 +1,32 @@
+<!--pages/profile/profile.wxml-->
+<!-- 1:头像 -->
+<view class="avatar">
+  <image src="/img/tab/avatar.png"
+    mode="aspectFill" lazy-load></image>
+</view>
+<!-- 2:灰色分割块 -->
+<view class="divider"></view>
+<!-- 3:个人资料 -->
+<view class="cell">
+   <navigator class="cell-item">
+     <text>个人资料</text>
+   </navigator>
+   <navigator class="cell-item arrow">
+     <text>我的优惠券</text>
+   </navigator>
+</view>
+<!-- 4:常见问题 -->
+<view class="divider"></view>
+<view class="cell">
+  <navigator class="cell-item arrow"><text>常见问题</text></navigator>
+  <navigator class="cell-item arrow"><text>使用条款</text></navigator>
+  <navigator class="cell-item arrow"><text>新手入门</text></navigator>
+  <navigator class="cell-item arrow"><text>积分策略</text></navigator>
+</view>
+<!-- 5:设置 -->
+<view class="divider"></view>
+<view class="cell">
+   <navigator class="cell-item arrow">
+     <text>设置</text>
+   </navigator>
+</view>
