@@ -3,6 +3,6 @@
 
 2、kugou项目(移动端) 通过vue/cli来搭建的，采用mint-ul实现ui效果，vuex集中管理数据，axios请求数据，采用vue-router搭建页面的路由(使用hash模式)
 
-3、maoyan项目(微信小程序) 通过
+3、maoyan项目(微信小程序) 通过了
 
 
